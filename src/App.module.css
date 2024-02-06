@@ -22,7 +22,6 @@
 }
 
 .container {
-    width: 100vw;
-    min-height: 100vh;
-    background: #1a1a1a;
+    height: 3000px;
+    background: #111111;
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from '/src/components/sections/NotificationLine.module.css'
+import styles from './NotificationLine.module.css'
 
 const NotificationLine = () => {
     return (
