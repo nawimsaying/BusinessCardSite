@@ -1,0 +1,66 @@
+.headerNav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 15px 0%; /* Задайте одинаковые отступы слева и справа */
+}
+
+
+ul {
+    flex: 1;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+}
+
+ul a {
+    color: inherit;
+    display: inline-block;
+    margin: 10px 45px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+ul a:hover,
+ul a.active {
+    color: rgba(229, 75, 255, 1); /* Цвет при наведении и для активной страницы */
+}
+
+.orderBtn {
+    position: absolute;
+    right: 18%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.buttonLink {
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    /* Добавьте остальные стили, если необходимо */
+}
+
+.button {
+    width: 121px;
+    height: 42px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid rgba(189, 0, 221, 1);
+    color: inherit;
+    font-family: 'Jura';
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: rgba(189, 0, 221, 0.1);
+}

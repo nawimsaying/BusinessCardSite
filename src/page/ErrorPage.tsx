@@ -1,14 +1,14 @@
 // @ts-ignore
 import React from 'react';
 
-const PortfolioPage = () => {
+const ErrorPage = () => {
     return (
         <div>
             <h1 style={{textAlign: 'center',}}>
-                Работы
+                404 Вы находитесь на не существующей странице
             </h1>
         </div>
     );
 };
 
-export default PortfolioPage;
+export default ErrorPage;
