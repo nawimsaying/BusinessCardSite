@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: space-between;
     background: transparent;
-    padding: 15px 0%; /* Задайте одинаковые отступы слева и справа */
+    padding: 15px 0%;
 }
 
 
@@ -28,7 +28,7 @@ ul a {
 
 ul a:hover,
 ul a.active {
-    color: rgba(229, 75, 255, 1); /* Цвет при наведении и для активной страницы */
+    color: rgba(229, 75, 255, 1);
 }
 
 .orderBtn {
@@ -44,7 +44,6 @@ ul a.active {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    /* Добавьте остальные стили, если необходимо */
 }
 
 .button {
