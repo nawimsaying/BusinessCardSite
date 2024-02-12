@@ -1,8 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&family=Jura:wght@400;600&display=swap');
 
 * {
     margin: 0;
     padding: 0;
+}
+
+h1, h2 {
+    cursor: default;
+    font-family: 'Jura', sans-serif;
+    font-weight: 600;
+}
+
+h3, h4, h5, h6 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
 }
 
 :root {
