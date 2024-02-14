@@ -3,15 +3,16 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 
 
-import Feedback from "./components/UI/feedback/Feedback.tsx";
+import Review from "./components/UI/feedback/Review.tsx";
+import Header from "./components/sections/Header.tsx";
+import App from "./App.tsx";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
         {/*<NotificationLine/>*/}
 
-        <Feedback/>
-        {/* <Header/>
-
-        <App/>*/}
+        {/*<Header/>*/}
+        <Review/>
+        {/*<App/>*/}
     </React.StrictMode>
 )

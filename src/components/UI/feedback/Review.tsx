@@ -1,15 +1,18 @@
 // @ts-ignore
 import React from 'react';
-import classes from "./Feedback.module.css";
+import classes from "./Review.module.css";
+import ItemReview from "../itemReview/ItemReview.tsx";
 
-const Feedback = () => {
+const Review = () => {
     return (
         <div>
             <div className={classes.feedback}>
 
                 <h1 className={classes.title}>Отзывы клиентов</h1>
+
                 <div className={classes.container}>
-                    <h1>Элементы</h1>
+                    <ItemReview/>
+
                 </div>
             </div>
         </div>
@@ -17,4 +20,4 @@ const Feedback = () => {
     );
 };
 
-export default Feedback;
+export default Review;

@@ -6,8 +6,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     overflow: auto;
+
 }
 
 .title {
@@ -18,6 +18,9 @@
     right: 0;
     text-align: center; /* Центрировать текст по горизонтали */
     color: white; /* Цвет текста */
+    font-size: 42px;
+    font-weight: 600;
+    font-optical-sizing: auto;
 }
 
 .container {
@@ -25,12 +28,13 @@
     max-width: 100%;
     width: 100%;
     text-align: center;
-    margin-top: 12%;
+    margin-top: 11%;
     display: flex;
     justify-content: center;
     align-items: center;
     line-height: 1;
-    height: 34vh;
+    height: 33vh;
+    position: relative;
 }
 
 

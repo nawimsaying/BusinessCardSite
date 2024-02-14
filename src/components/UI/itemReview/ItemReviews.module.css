@@ -1,0 +1,39 @@
+
+.container {
+    width: 27vh;
+    height: 100%;
+    background-color: rgba(28, 28, 28, 1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 3px solid #2F2F2F; /* Добавляем обводку по кругу */
+    overflow: hidden;
+}
+
+
+.imageSite {
+    height: 50%;
+    display: flex;
+}
+
+.reviewContent {
+    height: 50%;
+    justify-content: center;
+    display: flex;
+}
+
+.test {
+    margin-top: 20px;
+    background-color: #BF00DE;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center; /* Выравнивание по центру по горизонтали */
+}
+
+
+.img {
+    max-width: 100%; /* Максимальная ширина изображения - 100% родительского контейнера */
+    max-height: 100vh; /* Максимальная высота изображения - 100% родительского контейнера */
+    display: block;
+}
