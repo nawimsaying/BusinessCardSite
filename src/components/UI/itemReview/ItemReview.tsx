@@ -1,30 +1,35 @@
-import React, {useState, useEffect} from 'react';
+// ItemReview.tsx
+import React from 'react';
 import classes from "./ItemReviews.module.css";
 import {UserReviews} from "../../../architecture/userReviews/Models.ts";
-import {UserReviewsApiClient} from "../../../architecture/userReviews/UserReviewsApiClient.ts";
-import {UserReviewsRepository} from "../../../architecture/userReviews/UserReviewsRepository.ts";
 
-const ItemReview = () => {
+interface ItemReviewProps {
+    review: UserReviews; // Принимаем отзыв как пропс
+}
 
-    const imageTest1 = 'https://miro.medium.com/v2/resize:fit:700/1*7Qy6qbDkrIQ_7qPrnSqkiA.png'
-    const imageTest2 = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_YZtxp2SL0ulBsgwMURKfnUwpYgBdkw9oA_xR9gkf1DfKFTLdNp0z7jmXbs2opDlOn0M&usqp=CAU'
-    const imageTest3 = 'https://htmlburger.com/blog/wp-content/uploads/2023/04/modern-website-design-examples.jpg'
+const ItemReview: React.FC<ItemReviewProps> = ({review}) => {
+    const {siteImage, customerName, customerImage, rating, description} = review;
 
+    const gridImage = rating >= 5 ? '/images/GradeFive.png' : '/images/GradeFourPointFive.png';
 
     return (
         <div className={classes.container}>
-
             <div className={classes.imageSite}>
-                <img src={imageTest3} alt="SiteImage" className={classes.img}/>
+                <img src={siteImage} alt="SiteImage" className={classes.img}/>
             </div>
             <div className={classes.reviewContent}>
-
-                <div className={classes.test}>
-
+                <div className={classes.commentSeparator}></div>
+                <div className={classes.containerForReviewUser}>
+                    <div className={classes.containerForUserData}>
+                        <img src={customerImage} alt="UserPicture" className={classes.avatar}/>
+                        <div className={classes.userInfo}>
+                            <h1 className={classes.styleUsernameH1}>{customerName}</h1>
+                            <img src={gridImage} alt="UserPicture" className={classes.gird}/>
+                        </div>
+                    </div>
+                    <p className={classes.comment}>{description}</p>
                 </div>
             </div>
-
-
         </div>
     );
 };

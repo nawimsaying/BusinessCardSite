@@ -6,13 +6,19 @@
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    border: 3px solid #2F2F2F; /* Добавляем обводку по кругу */
+    border: 3px solid #2F2F2F;
     overflow: hidden;
 }
 
-
 .imageSite {
     height: 50%;
+    width: 100%;
+    display: flex;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
     display: flex;
 }
 
@@ -22,18 +28,66 @@
     display: flex;
 }
 
-.test {
-    margin-top: 20px;
-    background-color: #BF00DE;
-    height: 50px;
-    width: 50px;
+.containerForUserData {
+    width: 100%;
+    height: 5vh;
     display: flex;
-    justify-content: center; /* Выравнивание по центру по горизонтали */
+}
+
+.commentSeparator {
+    margin-top: 8.2vh;
+    width: 0.01vh;
+    height: 26%;
+    background-color: white;
+    margin-right: 5px;
+
+}
+
+.containerForReviewUser {
+    margin-right: 0.4vh;
+    margin-top: 8.5%;
+    width: 80%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar {
+    height: 4.1vh;
+    width: 4.1vh;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.styleUsernameH1 {
+    font-size: 1.12vh;
+    margin-top: 0.5vh;
+    margin-left: 0.85vh;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20vh;
+    max-height: 3.6vh;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.gird {
+    height: 3vh;
+    margin-top: -0.2vh;
+
+}
+
+.comment {
+    text-align: left;
+
 }
 
 
-.img {
-    max-width: 100%; /* Максимальная ширина изображения - 100% родительского контейнера */
-    max-height: 100vh; /* Максимальная высота изображения - 100% родительского контейнера */
-    display: block;
-}
+
+
+
