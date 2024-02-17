@@ -1,0 +1,55 @@
+.outerContainer {
+    display: flex;
+    overflow-x: hidden;
+}
+
+.container {
+    background: rgba(28, 28, 28, 1);
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    height: 33.5vh;
+    gap: 0.9vh;
+    user-select: none;
+    position: relative;
+}
+
+.track {
+    display: flex;
+    gap: 0.9vh;
+    margin-right: 0.9vh;
+}
+
+.container:before,
+.container:after {
+    position: absolute;
+    top: 0.55vh;
+    width: 14.2vh;
+    height: 31.6vh;
+    content: "";
+    z-index: 2
+}
+
+.container:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), black);
+}
+
+.container:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+}
+
+.containerSlide {
+    animation: slide 120s linear infinite;
+
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

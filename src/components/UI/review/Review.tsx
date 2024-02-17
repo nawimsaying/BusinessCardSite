@@ -10,16 +10,19 @@ const Review = () => {
     const [reviewsList, setReviewsList] = useState<UserReviews[]>([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
+    const repeatCount = 3; // Сколько раз дублировать массив
+    const limit = 10; // Ограничение на количество элементов с сервера
 
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
             setError(null);
-
             try {
                 const repository = new UserReviewsRepository(new UserReviewsApiClient());
                 const data = await repository.getAll();
-                setReviewsList(data);
+                const limitedData = data.slice(0, limit);
+                const duplicatedData = Array.from({length: repeatCount}, () => limitedData).flat();
+                setReviewsList(duplicatedData);
             } catch (error) {
                 setError('Ошибка при получении данных');
             } finally {
@@ -27,27 +30,28 @@ const Review = () => {
             }
         };
         fetchData();
-    }, []);
-
-
-    const limitedReviewsList = reviewsList.slice(0, 3);
+    }, [repeatCount, limit]);
 
     return (
-        <div>
-            <div className={classes.feedback}>
-                <h1 className={classes.title}>Отзывы клиентов</h1>
-                <div className={classes.container}>
-                    {loading ? (
-                        <p>Идет загрузка...</p>
-                    ) : error ? (
-                        <p>{error}</p>
-                    ) : (
-                        limitedReviewsList.map((review, index) => (
+        <div className={classes.container}>
+            {loading ? (
+                <p>Идет загрузка...</p>
+            ) : error ? (
+                <p>{error}</p>
+            ) : (
+                <div className={classes.outerContainer}>
+                    <div className={`${classes.track} ${classes.containerSlide}`}>
+                        {reviewsList.map((review, index) => (
                             <ItemReview key={index} review={review}/>
-                        ))
-                    )}
+                        ))}
+                    </div>
+                    <div className={`${classes.track} ${classes.containerSlide}`}>
+                        {reviewsList.map((review, index) => (
+                            <ItemReview key={index + reviewsList.length} review={review}/>
+                        ))}
+                    </div>
                 </div>
-            </div>
+            )}
         </div>
     );
 };

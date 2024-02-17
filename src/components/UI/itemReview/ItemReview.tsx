@@ -27,7 +27,9 @@ const ItemReview: React.FC<ItemReviewProps> = ({review}) => {
                             <img src={gridImage} alt="UserPicture" className={classes.gird}/>
                         </div>
                     </div>
-                    <p className={classes.comment}>{description}</p>
+                    <div className={classes.containerComment}>
+                        <p className={classes.comment}>{description}</p>
+                    </div>
                 </div>
             </div>
         </div>
