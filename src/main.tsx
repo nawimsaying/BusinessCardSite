@@ -9,11 +9,10 @@ import {BrowserRouter} from "react-router-dom";
 import AppRouter from "./components/AppRouter.tsx";
 import Header from './components/sections/Header.tsx'
 import DevApproach from './components/sections/DevApproach.tsx'
+import WhyUs from './components/sections/WhyUs.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <DevApproach/>
-
-        <App/>
+        <WhyUs/>
     </React.StrictMode>
 )
