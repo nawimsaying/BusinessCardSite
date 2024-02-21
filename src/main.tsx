@@ -10,9 +10,10 @@ import AppRouter from "./components/AppRouter.tsx";
 import Header from './components/sections/Header.tsx'
 import DevApproach from './components/sections/DevApproach.tsx'
 import WhyUs from './components/sections/WhyUs.tsx'
+import Contact from './components/sections/Contact.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <WhyUs/>
+        <Contact/>
     </React.StrictMode>
 )

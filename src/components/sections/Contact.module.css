@@ -1,0 +1,38 @@
+.background {
+    padding-left: 17.5%;
+    padding-right: 17.5%;
+    height: 602px;
+    width: 65%;
+    background-color: #111111;
+    position: absolute;
+}
+
+.title {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.description {
+    color: #818181;
+    text-align: center;
+    line-height: 25px;
+    margin-top: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.signature {
+    color: #4D4D4D;
+    text-align: center;
+    margin-top: 1%;
+}
+
+.line {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 35%;
+    margin-right: 35%;
+    color: #818181;
+    background-color: #818181;
+}
