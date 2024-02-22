@@ -1,0 +1,74 @@
+a {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
+    color: #FFF;
+    text-decoration: none;
+    font-size: medium;
+    position: relative;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.container {
+    background-color: #111111;
+    height: 367px;
+    padding-left: 17.5%;
+    padding-right: 17.5%;
+    display: flex;
+    border-color: #2F2F2F;
+    border-top: #2F2F2F solid 1px;
+}
+
+.description {
+    height: 82px;
+    background-color: #2F2F2F;
+    padding-left: 17.5%;
+    padding-right: 17.5%;
+    background-color: #111111;
+}
+
+.description_text {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
+    color: #9CA3AF;
+    font-size: small;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.links_block {
+    display: flex;
+    width: 70%;
+    height: 100%;
+}
+
+.column {
+    margin-right: 50px;
+    margin-top: 83.5px;
+}
+
+.title_links {
+    color: #818181;
+    font-size: larger;
+    margin-bottom: 10px;
+}
+
+.contact_block {
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+}
+
+.items {
+    height: fit-content;
+    margin: auto;
+}
+
+.contact_description {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
+    color: #9CA3AF;
+    font-size: small;
+    text-align: center;
+}
