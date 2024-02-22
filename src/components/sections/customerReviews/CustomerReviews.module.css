@@ -1,0 +1,18 @@
+.pageContainer {
+    background: rgba(17, 17, 17, 1);
+    text-align: center;
+    height: 480px;
+}
+
+.customerReviews {
+    padding-top: 55px;
+}
+
+.h1Font {
+    font-size: 38px;
+    font-weight: 600;
+}
+
+.reviewWrapper {
+    margin-top: 55px;
+}

@@ -18,7 +18,7 @@ const ItemReview: React.FC<ItemReviewProps> = ({review}) => {
                 <img src={siteImage} alt="SiteImage" className={classes.img}/>
             </div>
             <div className={classes.reviewContent}>
-                <div className={classes.commentSeparator}></div>
+
                 <div className={classes.containerForReviewUser}>
                     <div className={classes.containerForUserData}>
                         <img src={customerImage} alt="UserPicture" className={classes.avatar}/>
@@ -28,6 +28,7 @@ const ItemReview: React.FC<ItemReviewProps> = ({review}) => {
                         </div>
                     </div>
                     <div className={classes.containerComment}>
+                        <div className={classes.commentSeparator}></div>
                         <p className={classes.comment}>{description}</p>
                     </div>
                 </div>

@@ -4,28 +4,28 @@
 }
 
 .container {
-    background: rgba(28, 28, 28, 1);
+    background: transparent;
     display: flex;
     align-items: center;
     line-height: 1;
-    height: 33.5vh;
-    gap: 0.9vh;
+    height: 260px;
+    gap: 5px;
     user-select: none;
     position: relative;
 }
 
 .track {
     display: flex;
-    gap: 0.9vh;
+    gap: 5px;
     margin-right: 0.9vh;
 }
 
 .container:before,
 .container:after {
     position: absolute;
-    top: 0.55vh;
-    width: 14.2vh;
-    height: 31.6vh;
+    top: 0px;
+    width: 117px;
+    height: 260px;
     content: "";
     z-index: 2
 }
@@ -42,7 +42,10 @@
 
 .containerSlide {
     animation: slide 120s linear infinite;
+}
 
+.container:hover .containerSlide{
+    animation-play-state: paused;
 }
 
 @keyframes slide {
