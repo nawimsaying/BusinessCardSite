@@ -1,4 +1,5 @@
-import { useState } from 'react'
+// @ts-ignore
+import {useState} from 'react'
 import '/src/index.css'
 import styles from './EmailCopy.module.css'
 
@@ -10,7 +11,7 @@ const EmailCopy = () => {
                     <p className={styles.text_email}>virtspaceweb@gmail.com</p>
 
                     <button className={styles.copy_button} onClick={copyToClipboard}>
-                        <img className={styles.copy_email_icon} src='public/svg/copy_email_icon.svg'></img>
+                        <img className={styles.copy_email_icon} src='../../../../public/svg/copy_email_icon.svg'></img>
                     </button>
                 </div>
             </div>
@@ -24,10 +25,10 @@ function copyToClipboard() {
 
     navigator.clipboard.writeText(textToCopy)
         .then(() => {
-        alert('Email скопирован в буфер обмена');
+            alert('Email скопирован в буфер обмена');
         })
         .catch((error) => {
-        console.error('Ошибка копирования Email: ', error);
+            console.error('Ошибка копирования Email: ', error);
         });
 }
 

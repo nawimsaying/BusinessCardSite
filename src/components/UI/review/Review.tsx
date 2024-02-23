@@ -37,7 +37,7 @@ const Review = () => {
             {loading ? (
                 <p>Идет загрузка...</p>
             ) : error ? (
-                <p>{error}</p>
+                <p style={{textAlign: "center", width: "100%"}}>{error}</p>
             ) : (
                 <div className={classes.outerContainer}>
                     <div className={`${classes.track} ${classes.containerSlide}`}>

@@ -10,7 +10,7 @@ export class UserFeedBackApiClient implements IUserFeedbackSource {
 
     async sendEmail(email: string): Promise<Result<UserFeedback>> {
         try {
-            const response: AxiosResponse<any> = await this.client.post('http://31.129.100.55:81/api/Feedbacks/sendmail', {
+            const response: AxiosResponse<any> = await this.client.post(`http://31.129.100.55:81/api/Feedbacks/${email}`, {
                 email: email,
             });
             const userFeedback = new UserFeedback(response.status);

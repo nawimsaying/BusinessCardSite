@@ -1,5 +1,5 @@
 // @ts-ignore
-import { useState } from 'react'
+import {useState} from 'react'
 import styles from './NotificationLine.module.css'
 
 const NotificationLine = () => {
@@ -7,11 +7,11 @@ const NotificationLine = () => {
         <>
             <div className={styles.frame}>
                 <div className={styles.image_container_left}>
-                    <img src='public/images/GridNotificationLine.png'></img>
+                    <img src='../../../../public/images/GridNotificationLine.png'></img>
                 </div>
 
                 <div className={styles.image_container_right}>
-                    <img src='public/images/Grid2NotificationLine.png'></img>
+                    <img src='../../../../public/images/Grid2NotificationLine.png'></img>
                 </div>
 
                 <div className={styles.text_container}>

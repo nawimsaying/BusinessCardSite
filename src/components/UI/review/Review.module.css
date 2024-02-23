@@ -44,7 +44,7 @@
     animation: slide 120s linear infinite;
 }
 
-.container:hover .containerSlide{
+.container:hover .containerSlide {
     animation-play-state: paused;
 }
 

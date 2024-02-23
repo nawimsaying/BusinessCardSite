@@ -11,7 +11,7 @@ export class UserReviewsApiClient implements IUserReviewsSource {
 
     async getAll(): Promise<Result<UserReviews[]>> {
         try {
-            const response: AxiosResponse<any[]> = await this.client.get(`http://31.129.100.55:81/Reviews`);
+            const response: AxiosResponse<any[]> = await this.client.get(`http://31.129.100.55:81/api/Reviews`);
             const jsonResponse: any[] = response.data;
 
             const userReviews: UserReviews[] = jsonResponse.map((item: any) => {

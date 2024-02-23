@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import {useState} from 'react'
 import '/src/index.css'
 import styles from './Footer.module.css'
 
-import EmailInputFooter from '../UI/EmailInputFooter'
+import EmailInputFooter from '../../UI/emailInputFooter/EmailInputFooter.tsx'
 
 const Contact = () => {
     return (
@@ -35,9 +35,10 @@ const Contact = () => {
                     <div className={styles.items}>
                         <h1>Мы вам напишем</h1>
 
-                        <EmailInputFooter />
+                        <EmailInputFooter/>
 
-                        <p className={styles.contact_description}>Это не подписка на рассылку. Мы используем почту только для связи.</p>
+                        <p className={styles.contact_description}>Это не подписка на рассылку. Мы используем почту
+                            только для связи.</p>
                     </div>
                 </div>
             </div>

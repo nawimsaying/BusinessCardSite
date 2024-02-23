@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import {useState} from 'react'
 import '/src/index.css'
-import styles from './EmailInputFooter.module.css'
+import styles from './EmailInput.module.css'
 
-const EmailInputFooter = () => {
+const EmailInput = () => {
     const [inputValue, setInputValue] = useState('');
     const [result, setResult] = useState('');
 
@@ -21,10 +21,10 @@ const EmailInputFooter = () => {
         <>
             <div className={styles.email}>
                 <input className={styles.email_input}
-                    placeholder='Email адрес' 
-                    type='email'
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}>
+                       placeholder='Email адрес'
+                       type='email'
+                       value={inputValue}
+                       onChange={(e) => setInputValue(e.target.value)}>
                 </input>
 
                 <button className={styles.email_button_send} onClick={handleButtonClick}>Отправить</button>
@@ -33,4 +33,4 @@ const EmailInputFooter = () => {
     )
 }
 
-export default EmailInputFooter
+export default EmailInput
