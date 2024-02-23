@@ -1,0 +1,44 @@
+.info_screen {
+    padding-left: 17.5vw;
+    padding-right: 17.5vw;
+    height: 664px;
+    background-color: #111111;
+    position: absolute;
+}
+
+.info_text {
+    text-align: center;
+    height: 5%;
+    margin-top: 5%;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    height: 80%;
+}
+
+.info_block {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.info_block_item {
+    text-align: center;
+}
+
+.block_small_text {
+    line-height: 20px;
+    color: #928B9F;
+    margin-top: 20px;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+}
+
+.image {
+    width: 60%;
+    scale: 1.75;
+    z-index: -10;
+}

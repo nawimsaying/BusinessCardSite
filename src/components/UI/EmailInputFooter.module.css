@@ -1,0 +1,32 @@
+.email {
+    height: 98px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.email_input {
+    width: calc(100% - 40px);
+    height: 41px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
+    font-size: medium;
+    background-color: #343841;
+    margin-bottom: 10px;
+}
+
+.email_button_send {
+    width: 100%;
+    height: 41px;
+    color: #FFF;
+    background: linear-gradient(to right, #BE00DE, #8300D1);
+    border-radius: 100px;
+    border: none;
+    font-family: 'Jura', sans-serif;
+    font-weight: 600;
+    font-size: medium;
+    cursor: pointer;
+}

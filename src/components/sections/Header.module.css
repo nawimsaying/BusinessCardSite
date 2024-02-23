@@ -2,5 +2,6 @@
 .container {
     position: fixed;
     width: 100%;
-    top: 54px
+    top: 54px;
+    z-index: 90;
 }
