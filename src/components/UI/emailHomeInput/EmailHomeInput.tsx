@@ -1,6 +1,5 @@
-// @ts-ignore
 import React, {useState} from 'react';
-// @ts-ignore
+import '/src/index.css'
 import styles from "./EmailHomeInput.module.css";
 
 const EmailHomeInput = () => {

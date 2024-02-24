@@ -1,8 +1,70 @@
+p {
+    margin: 0;
+}
+
 .container {
     display: flex;
-    justify-content: end;
+    height: 100%;
     align-items: center;
-    background-color: #BF00DE;
 }
-.reviews{
+
+.reviews {
+    width: 50%;
+    height: 100%;
+    border-bottom: solid 1px;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    border-image: linear-gradient(to top, #FFF, transparent, transparent);
+    border-image-slice: 1;
+}
+
+.main_text {
+    cursor: default;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    height: 70%;
+    margin-top: -5%;
+}
+
+.main_text_grade {
+    cursor: default;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    height: 70%;
+    margin-top: -15%;
+}
+
+.image_grade {
+    margin-top: -8%;
+    height: 50%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.desc_text {
+    cursor: default;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    text-wrap: nowrap;
+}
+
+.desc_text_grade {
+    cursor: default;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    text-wrap: nowrap;
+    margin-top: -5%;
+}
+
+.stars {
+    width: 50%;
+    height: 100%;
+    border-bottom: solid 1px;
+    border-right: solid 1px;
+    border-image: linear-gradient(to top, #FFF, transparent, transparent);
+    border-image-slice: 1;
 }

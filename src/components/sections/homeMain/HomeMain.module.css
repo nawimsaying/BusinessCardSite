@@ -1,16 +1,22 @@
 .container {
-    position: relative;
     width: 100%;
-    height: 680px;
-    overflow: hidden;
+    height: 950px;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    text-align: center;
+    overflow: visible;
+    position: absolute;
+}
+
+.center_container {
+    height: fit-content;
+    margin: auto;
+    height: 100%;
+    width: 1266px;
 }
 
 .oval {
     position: absolute;
-    top: 25%;
+    top: 10%;
     z-index: -1;
     width: 100%;
     height: 60%;
@@ -20,26 +26,52 @@
     filter: blur(100px);
 }
 
-.text-container p, h1 {
-    margin-top: 150px;
-    text-align: center;
-    padding: 20px;
-    font-size: xx-large;
+.title {
+    font-size: 55px;
+    line-height: 50px;
+    font-weight: 500;
 }
 
 .des {
+    color: #818181;
     text-align: center;
-    font-size: smaller;
+    line-height: 25px;
+    padding-left: 30%;
+    padding-right: 30%;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
-p{
+
+.main_block {
+    height: 80%;
+}
+
+.bottom_block {
+    height: 20%;
+}
+
+.text_container_flex {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.text_container {
+    height: fit-content;
+    margin: auto;
+}
+
+p {
     font-size: x-small;
     color: lightgrey;
     margin-top: 10px;
 }
+
 .button_feedback {
     display: block;
-    width: 300px;
-    height: 40px;
+    width: 255px;
+    height: 54px;
     color: #FFF;
     margin-top: 20px;
     background: linear-gradient(to right, #BE00DE, #8300D1);
@@ -53,21 +85,33 @@ p{
     margin-right: auto;
 }
 
-.email_input{
+.email_review {
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+
+.email_input {
     align-items:  start;
     display: flex;
     flex-direction: column;
-    margin-left:  100px;
     text-align: start;
-}
-
-.grade{
-    align-items: flex-end;
-    margin-right: 100px;
-    margin-left: 900px;
+    width: 30%;
     height: 100%;
 }
 
-.email_review{
-    display: flex;
+.empty {
+    width: 40%;
+    height: 100%;
+}
+
+.grade {
+    align-items: flex-end;
+    width: 35%;
+    height: 100%;
+}
+
+.description {
+    margin-top: 10px;
+    color: #4D4D4D;
 }
