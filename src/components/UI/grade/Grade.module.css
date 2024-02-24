@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: #BF00DE;
+}
+.reviews{
+}
