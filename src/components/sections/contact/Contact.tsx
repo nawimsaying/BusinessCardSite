@@ -1,3 +1,4 @@
+// @ts-ignore
 import {useState} from 'react'
 import '/src/index.css'
 import styles from './Contact.module.css'

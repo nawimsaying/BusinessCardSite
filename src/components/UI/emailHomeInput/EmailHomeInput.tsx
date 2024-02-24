@@ -1,10 +1,10 @@
-import {useState} from 'react'
-import '/src/index.css'
-import styles from './EmailInput.module.css'
+// @ts-ignore
+import React, {useState} from 'react';
+// @ts-ignore
+import styles from "./EmailHomeInput.module.css";
 
-const EmailInput = () => {
+const EmailHomeInput = () => {
     const [inputValue, setInputValue] = useState('');
-    // @ts-ignore
     const [result, setResult] = useState('');
 
     const handleButtonClick = () => {
@@ -15,6 +15,7 @@ const EmailInput = () => {
 
     const processData = (data: string) => {
         // Обработка данных после нажатия на кнопку - Отправить email
+
         return data.toLowerCase();
     };
 
@@ -28,10 +29,12 @@ const EmailInput = () => {
                        onChange={(e) => setInputValue(e.target.value)}>
                 </input>
 
-                <button className={styles.email_button_send} onClick={handleButtonClick}>Отправить</button>
+                <button className={styles.email_button_send} onClick={handleButtonClick}>
+                    <img src="../../../../public/images/Arrow_Up_Right_LG.png" alt="vector"/>
+                </button>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default EmailInput
+export default EmailHomeInput;
