@@ -4,6 +4,7 @@ import styles from './EmailInput.module.css'
 
 const EmailInput = () => {
     const [inputValue, setInputValue] = useState('');
+    // @ts-ignore
     const [result, setResult] = useState('');
 
     const handleButtonClick = () => {
