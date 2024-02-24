@@ -12,27 +12,35 @@ const Header = () => {
 
     return (
         <div className={classes.headerNav}>
+            <div className={classes.container}>
+                <div className={classes.container_flex}>
+                    <div className={classes.block_logo}>
+                        <div className={classes.logo}>
 
-            <ul>
-                <NavLink to="/home" className={classes.navLink} style={navLinkStyle('/home')}>
-                    Главная
-                </NavLink>
-                <NavLink to="/portfolio" className={classes.navLink} style={navLinkStyle('/portfolio')}>
-                    Работы
-                </NavLink>
-                <NavLink to="/aboutUs" className={classes.navLink} style={navLinkStyle('/aboutUs')}>
-                    О нас
-                </NavLink>
-            </ul>
+                        </div>
+                    </div>
 
-            <div className={classes.orderBtn}>
-                <Link to="/contactPage" className={classes.buttonLink}>
-                    <button className={classes.button}>
-                        Заказать
-                    </button>
-                </Link>
+                    <ul className={classes.block_links}>
+                        <NavLink to="/home" className={classes.navLink} style={navLinkStyle('/home')}>
+                            Главная
+                        </NavLink>
+                        <NavLink to="/portfolio" className={classes.navLink} style={navLinkStyle('/portfolio')}>
+                            Работы
+                        </NavLink>
+                        <NavLink to="/aboutUs" className={classes.navLink} style={navLinkStyle('/aboutUs')}>
+                            О нас
+                        </NavLink>
+                    </ul>
+
+                    <div className={classes.block_button}>
+                        <Link to="/contactPage" className={classes.buttonLink}>
+                            <button className={classes.button}>
+                                Заказать
+                            </button>
+                        </Link>
+                    </div>
+                </div>
             </div>
-
         </div>
     );
 };

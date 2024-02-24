@@ -9,10 +9,12 @@ function Header() {
     return (
         <>
             <div className={styles.container}>
-                <BrowserRouter>
-                    <NavBar/>
-                    <AppRouter/>
-                </BrowserRouter>
+                <div className={styles.center_container}>
+                    <BrowserRouter>
+                        <NavBar/>
+                        <AppRouter/>
+                    </BrowserRouter>
+                </div>
             </div>
         </>
     );

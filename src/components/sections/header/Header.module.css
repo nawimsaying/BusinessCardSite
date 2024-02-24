@@ -1,7 +1,12 @@
-
 .container {
     position: fixed;
     width: 100%;
-    top: 54px;
     z-index: 90;
+    display: flex;
+    text-align: center;
+}
+
+.center_container {
+    height: fit-content;
+    margin: auto;
 }
