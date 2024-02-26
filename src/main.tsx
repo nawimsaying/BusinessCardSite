@@ -1,21 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-
 import App from './App.tsx'
 import NotificationLine from './components/sections/notificationLine/NotificationLine.tsx'
 import Contact from "./components/sections/contact/Contact.tsx";
-import CustomerReviews from './components/sections/customerReviews/CustomerReviews.tsx'
-import DevApproach from './components/sections/devApproach/DevApproach.tsx'
-import Footer from './components/sections/footer/Footer.tsx'
-import Header from './components/sections/header/Header.tsx'
-import WhyUs from './components/sections/whyUs/WhyUs.tsx'
-import HomeMain from './components/sections/homeMain/HomeMain.tsx'
+import CustomerReviewsForPortfolio
+    from "./components/sections/customerReviewsForPortfolio/CustomerReviewsForPortfolio.tsx";
+import Info from "./components/sections/info/Info.tsx";
+import CustomerReviewsForMain from "./components/sections/customerReviewsForMain/CustomerReviewsForMain.tsx";
+
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
+        <NotificationLine/>
 
-        <HomeMain/>
-
+        <CustomerReviewsForMain/>
     </React.StrictMode>
 )

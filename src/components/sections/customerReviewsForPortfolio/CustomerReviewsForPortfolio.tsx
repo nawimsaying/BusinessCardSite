@@ -1,9 +1,9 @@
 // @ts-ignore
 import React from 'react';
 import Review from "../../UI/review/Review.tsx";
-import classes from './CustomerReviews.module.css';
+import classes from './CustomerReviewsForPortfolio.module.css';
 
-const CustomerReviews = () => {
+const CustomerReviewsForPortfolio = () => {
     return (
         <div className={classes.pageContainer}>
             <div className={classes.customerReviews}>
@@ -16,4 +16,4 @@ const CustomerReviews = () => {
     );
 };
 
-export default CustomerReviews;
+export default CustomerReviewsForPortfolio;

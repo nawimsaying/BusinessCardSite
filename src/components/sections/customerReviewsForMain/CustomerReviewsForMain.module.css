@@ -1,0 +1,49 @@
+.pageContainer {
+    background: linear-gradient(to right, #100329, #210D2C);
+    text-align: center;
+    height: 480px;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.customerReviews {
+    padding-top: 55px;
+}
+
+.h1Font {
+
+}
+
+.reviewWrapper {
+    margin-top: 55px;
+}
+
+
+.flex_bg_1 {
+    width: 50%;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.flex_bg_2 {
+    width: 50%;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flex_bg {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}

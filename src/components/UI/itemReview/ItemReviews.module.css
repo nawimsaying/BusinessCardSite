@@ -61,6 +61,8 @@
 }
 
 .styleUsernameH1 {
+    font-family: "Exo 2";
+    font-weight: 400;
     font-size: 12px;
     margin-top: 2px;
     margin-left: 6px;
@@ -94,6 +96,8 @@
 .comment {
     font-size: 10px;
     text-align: left;
+    font-family: "Exo 2";
+    font-weight: 400;
 }
 
 
