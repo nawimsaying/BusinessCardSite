@@ -1,5 +1,6 @@
 // @ts-ignore
 import React from 'react';
+import '/src/index.css'
 import styles from "../info/Info.module.css";
 import InfoBlocks from "../../UI/listInfoBlocks/ListInfoBlocks.tsx";
 
@@ -19,9 +20,9 @@ const Info = () => {
 
             <div className={styles.headContainer}>
                 <h1 className={styles.title}>От идеи до результата </h1>
-                <p className={styles.description}>В течение всей разработки мы будем делиться с Вами результатами. Мы
+                <h3 className={styles.description}>В течение всей разработки мы будем делиться с Вами результатами. Мы
                     обязательно доведем проект до
-                    конца!</p>
+                    конца!</h3>
             </div>
 
             <div className={styles.containerBlocks}>

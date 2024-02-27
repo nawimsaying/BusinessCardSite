@@ -4,6 +4,7 @@
     background-color: #111111;
     text-align: center;
     display: flex;
+    position: relative;
 }
 
 .center_container {
@@ -37,8 +38,9 @@
 }
 
 .block_small_text {
-    line-height: 20px;
+    line-height: 25px;
     color: #928B9F;
+    color: #818181;
     margin-top: 20px;
     padding-left: 2.5vw;
     padding-right: 2.5vw;

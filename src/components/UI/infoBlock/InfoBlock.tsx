@@ -1,5 +1,6 @@
 // @ts-ignore
 import React from 'react';
+import '/src/index.css'
 import classes from "./InfoBlock.module.css";
 
 class InfoBlock extends React.Component<{
@@ -13,7 +14,7 @@ class InfoBlock extends React.Component<{
         let {spanText, description, circle1Color, circle2Color, framePictureSrc} = this.props;
         return (
             <div className={classes.BlockContainer}>
-                <p>
+                <p className={classes.p}>
                     <span>{spanText}</span> {description}
                 </p>
                 <div className={classes.circleContainer}>

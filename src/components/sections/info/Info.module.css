@@ -1,26 +1,24 @@
-
 .headContainer {
-    margin-left: 450px;
-    margin-right: 450px;
-    height: 170px;
+    height: 230px;
     align-items: center;
     display: flex;
+    position: relative;
     flex-direction: column;
     text-align: center;
 }
 
 .title {
-    margin-top: 65px;
-    font-size: 38px;
-    font-weight: 600;
+    margin-top: 5%;
     padding-bottom: 15px;
 }
 
 .description {
-    width: 400px;
-    font-size: 14px;
-    color: rgba(129, 129, 129, 1);
-    line-height: 1;
+    color: #818181;
+    text-align: center;
+    line-height: 25px;
+    margin-top: 2%;
+    padding-left: 30%;
+    padding-right: 30%;
 }
 
 
@@ -38,7 +36,7 @@
     background: linear-gradient(to right, #100329, #210D2C);
     width: 100%;
     height: 680px;
-    position: absolute;
+    position: relative;
     z-index: 0;
 }
 

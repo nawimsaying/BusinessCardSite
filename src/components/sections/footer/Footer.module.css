@@ -42,7 +42,7 @@ a {
 .description_text {
     font-family: 'Exo 2', sans-serif;
     font-weight: 400;
-    color: #9CA3AF;
+    color: #818181;
     font-size: small;
     text-align: center;
     margin-top: 50px;
@@ -80,7 +80,7 @@ a {
 .contact_description {
     font-family: 'Exo 2', sans-serif;
     font-weight: 400;
-    color: #9CA3AF;
+    color: #4D4D4D;
     font-size: small;
     text-align: center;
 }

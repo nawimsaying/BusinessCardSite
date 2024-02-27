@@ -8,7 +8,7 @@ const EmailCopy = () => {
         <>
             <div className={styles.email}>
                 <div className={styles.email_copy}>
-                    <p className={styles.text_email}>virtspaceweb@gmail.com</p>
+                    <h4 className={styles.text_email}>virtspaceweb@gmail.com</h4>
 
                     <button className={styles.copy_button} onClick={copyToClipboard}>
                         <img className={styles.copy_email_icon} src='../../../../public/svg/copy_email_icon.svg'></img>
