@@ -12,10 +12,10 @@ import CustomerReviewsForMain from '../components/sections/customerReviewsForMai
 const HomePage = () => {
     return (
         <>
-            <Header/>
             <HomeMain/>
             <Info/>
             <WhyUs/>
+            <CustomerReviewsForMain/>
             <Contact/>
             <Footer/>
         </>
