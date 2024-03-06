@@ -1,5 +1,6 @@
 // @ts-ignore
 import React from 'react';
+import Review from "../components/UI/review/Review.tsx";
 
 const PortfolioPage = () => {
     return (
@@ -7,6 +8,8 @@ const PortfolioPage = () => {
             <h1 style={{textAlign: 'center',}}>
                 Работы
             </h1>
+
+            <Review/>
         </div>
     );
 };
