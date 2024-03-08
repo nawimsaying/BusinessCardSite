@@ -1,5 +1,6 @@
 // @ts-ignore
 import React from 'react';
+
 import HomeMain from '../components/sections/homeMain/HomeMain';
 import NotificationLine from '../components/sections/notificationLine/NotificationLine';
 import Header from '../components/sections/header/Header';
@@ -12,6 +13,7 @@ import CustomerReviewsForMain from '../components/sections/customerReviewsForMai
 const HomePage = () => {
     return (
         <>
+            <Header/>
             <HomeMain/>
             <Info/>
             <WhyUs/>

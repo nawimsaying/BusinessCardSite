@@ -34,8 +34,19 @@
     text-align: center;
     margin-top: 60px;
     margin-bottom: 60px;
-    margin-left: 35%;
-    margin-right: 35%;
+    margin-left: 25%;
+    margin-right: 25%;
     color: #818181;
     background-color: #818181;
+}
+
+@media (max-width: 540px) {
+    .description {
+        color: #818181;
+        text-align: center;
+        line-height: 25px;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-top: 30px;
+    }
 }

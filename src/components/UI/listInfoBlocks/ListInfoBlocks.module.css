@@ -1,14 +1,24 @@
 .container {
     display: flex;
     height: 100%;
-    gap: 10px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    gap: 10px;
 }
 
 .flex_infoblock {
     display: flex;
     height: 100%;
-    gap: 10px;
+}
+
+@media (max-width: 1282px) {
+    .container {
+        display: flex;
+        height: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 630px;
+    }
 }

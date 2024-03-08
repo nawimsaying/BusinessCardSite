@@ -5,7 +5,9 @@ p {
 .container {
     display: flex;
     height: 100%;
+    margin: auto;
     align-items: center;
+    width: 450px;
 }
 
 .reviews {
@@ -49,6 +51,8 @@ p {
     font-weight: 400;
     font-size: 13px;
     text-wrap: nowrap;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .desc_text_grade {
@@ -58,6 +62,8 @@ p {
     font-size: 13px;
     text-wrap: nowrap;
     margin-top: -5%;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .stars {
@@ -67,4 +73,14 @@ p {
     border-right: solid 1px;
     border-image: linear-gradient(to top, #FFF, transparent, transparent);
     border-image-slice: 1;
+}
+
+@media (max-width: 500px) {
+    .container {
+        display: flex;
+        height: 100%;
+        margin: auto;
+        align-items: center;
+        width: 90vw;
+    }
 }

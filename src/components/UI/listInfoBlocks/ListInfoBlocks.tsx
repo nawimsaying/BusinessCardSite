@@ -15,6 +15,9 @@ const ListInfoBlocks = () => {
                     circle2Color="rgba(62, 1, 163, 1)"
                     framePictureSrc="../../../../public/images/OneFrameInfo.png"
                 />
+            </div>
+
+            <div className={classes.flex_infoblock}>
                 <InfoBlock
                     spanText="Разработка дизайна."
                     description="Распологаем блоки, главные элементы страницы и прорабатываем общую структуру сайта. Добавляем привлекательные стили."
@@ -32,6 +35,9 @@ const ListInfoBlocks = () => {
                     circle2Color="rgba(62, 1, 163, 1)"
                     framePictureSrc="../../../../public/images/ThreeFrameInfo.png"
                 />
+            </div>
+
+            <div className={classes.flex_infoblock}>
                 <InfoBlock
                     spanText="Загрузка сайта на хостинг."
                     description="Мы загрузим Ваш сайт на хостинг, чтобы он был доступен другим пользователям."

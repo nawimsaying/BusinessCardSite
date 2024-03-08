@@ -9,4 +9,17 @@
 .center_container {
     height: fit-content;
     margin: auto;
+    width: auto;
+}
+
+@media (max-width: 1300px) {
+    .center_container {
+        width: 85%;
+    }
+}
+
+@media (max-width: 990px) {
+    .container {
+        display: none;
+    }
 }

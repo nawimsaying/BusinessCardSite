@@ -66,7 +66,7 @@ ul a.active {
     font-family: 'Jura', sans-serif;
     font-size: 18px;
     font-weight: 400;
-    width: 10%;
+    width: 75px;
 }
 
 .block_button {
@@ -99,4 +99,18 @@ ul a.active {
 
 .button:hover {
     background-color: rgba(189, 0, 221, 0.1);
+}
+
+@media (max-width: 1300px) {
+    .headerNav {
+        position: relative;
+        width: 100%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
