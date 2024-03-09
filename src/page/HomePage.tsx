@@ -9,6 +9,7 @@ import WhyUs from '../components/sections/whyUs/WhyUs';
 import Footer from '../components/sections/footer/Footer';
 import Info from '../components/sections/info/Info';
 import CustomerReviewsForMain from '../components/sections/customerReviewsForMain/CustomerReviewsForMain';
+import CustomerReviewsForPortfolio from '../components/sections/customerReviewsForPortfolio/CustomerReviewsForPortfolio';
 
 const HomePage = () => {
     return (
@@ -17,7 +18,7 @@ const HomePage = () => {
             <HomeMain/>
             <Info/>
             <WhyUs/>
-            <CustomerReviewsForMain/>
+            <CustomerReviewsForPortfolio/>
             <Contact/>
             <Footer/>
         </>

@@ -1,15 +1,17 @@
 // @ts-ignore
 import React from 'react';
 
+import Header from '../components/sections/header/Header';
+import Contact from '../components/sections/contact/Contact';
+import Footer from '../components/sections/footer/Footer';
+
 const ContactPage = () => {
-
-
     return (
-        <div>
-            <h1 style={{textAlign: 'center',}}>
-                Страница для связи
-            </h1>
-        </div>
+        <>
+            <Header/>
+            <Contact/>
+            <Footer/>
+        </>
     );
 };
 
