@@ -1,15 +1,12 @@
-// @ts-ignore
 import React from 'react';
-
 import DevApproach from '../components/sections/devApproach/DevApproach';
 import Footer from '../components/sections/footer/Footer';
 import AboutUsMain from '../components/sections/aboutUsMain/AboutUsMain';
-import Header from '../components/sections/header/Header';
 
-const AboutUsPage = () => {
+
+const AboutUsPage:React.FC = () => {
     return (
         <>
-            <Header/>
             <AboutUsMain/>
             <DevApproach/>
             <Footer/>

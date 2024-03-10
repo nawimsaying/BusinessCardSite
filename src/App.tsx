@@ -1,17 +1,16 @@
-// @ts-ignore
-import React, {useEffect, useState} from 'react';
-import classes from "./App.module.css";
-import HomePage from './page/HomePage';
-import PortfolioPage from './page/PortfolioPage';
-import AboutUsPage from './page/AboutUsPage';
-import ErrorPage from './page/ErrorPage';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-function App() {
+import Header from "./components/sections/header/Header.tsx";
+import AppRouter from "./components/AppRouter.tsx";
+
+const App: React.FC = () => {
     return (
-        <>
-            <ErrorPage/>
-        </>
+        <Router>
+            <Header/>
+            <AppRouter/>
+        </Router>
     );
-}
+};
 
 export default App;
