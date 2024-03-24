@@ -2,6 +2,7 @@
 import {useState} from 'react'
 import '/src/index.css'
 import styles from './Contact.module.css'
+import { motion } from 'framer-motion'
 
 import EmailInput from '../../UI/emailInput/EmailInput.tsx'
 import EmailCopy from '../../UI/emailCopy/EmailCopy.tsx'
@@ -9,24 +10,49 @@ import EmailCopy from '../../UI/emailCopy/EmailCopy.tsx'
 const Contact = () => {
     return (
         <>
-            <div className={styles.background}>
-                <div className={styles.container}>
-                    <h1 className={styles.title}>Связь с нами</h1>
-                    <h3 className={styles.description}>Просто оставьте свой e-mail, и мы приложим все усилия, чтобы Ваше
-                        виртуальное пространство стало реальностью! Мы сами с Вами свяжемся.</h3>
+            <div id="contact">
+                <div className={styles.flex}>
+                    <div className={styles.container}>
+                        <motion.section variants={sectionAnimation} initial='hidden' whileInView='visible' viewport={{ once: true }}>
+                            <p className={styles.section_name}>/ КОНТАКТЫ</p>
 
-                    <EmailInput/>
+                            <div className={styles.container_flex}>
+                                <div className={styles.text_block}>
+                                    <p className={styles.title}>СВЯЗАТЬСЯ<br/>С НАМИ</p>
 
-                    <h5 className={styles.signature}>Это не подписка на рассылку. Мы используем почту только для связи.</h5>
+                                    <p className={styles.description}>Оставьте свой адрес элестронной почты и мы сами Вам напишем!</p>
+                                </div>
 
-                    <hr className={styles.line} color='#818181'></hr>
-                    <h3 className={styles.description}>Или напишите нам на почту.</h3>
+                                <div className={styles.right_block}>
+                                    <div className={styles.desc_block}>
+                                        <input placeholder='EMAIL АДРЕС' type='email' className={styles.desc_input}></input>
 
-                    <EmailCopy/>
+                                        <button className={styles.desc_btn}>ОТПРАВИТЬ</button>
+                                    </div>
+
+                                    <div className={styles.bottom_block}>
+                                        <p className={styles.bottom_desc}>virtspaceweb@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.section>
+                    </div>
                 </div>
             </div>
         </>
     )
+}
+
+const sectionAnimation = {
+    hidden: {
+        x: -100,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: { delay: 0.4, type: "spring", stiffness: 75 }
+    },
 }
 
 export default Contact

@@ -2,111 +2,106 @@
 import {useState} from 'react'
 import '/src/index.css'
 import styles from './DevApproach.module.css'
+import { motion } from 'framer-motion'
 
 const DevApproach = () => {
     return (
         <>
-            <div className={styles.background}>
-                
-                <div className={styles.flex_bg}>
-                    <div className={styles.flex_bg_1}>
-                        <img className={styles.left_bg_image} src='../../../../public/images/GridDevApproach.png'></img>
+            <div className={styles.flex}>
+                <div className={styles.background_gradient}></div>
+
+                <div className={styles.container}>
+                    <div className={styles.items_box}>
+                        <motion.section variants={sectionAnimation} initial='hidden' whileInView='visible' viewport={{ once: true }}>
+                            <hr color='#000'/>
+
+                            <div className={styles.item}>
+                                <p className={styles.item_title}>ТЕХНИЧЕСКОЕ<br/>ЗАДАНИЕ</p>
+
+                                <p className={styles.item_desc}>Детальная проработка технического задания - первый и очень важный этап для упешной разработки любого продукта. Мы уделяем должное внимание обсуждениям ТЗ с нашими заказчиками, чтобы избежать всех недопониманий и четко сформулировать задачи.</p>
+                            </div>
+                        </motion.section>
+
+                        <motion.section variants={sectionAnimation} initial='hidden' whileInView='visible' viewport={{ once: true }}>
+                            <hr color='#000'/>
+
+                            <div className={styles.item}>
+                                <p className={styles.item_title}>ДИЗАЙН</p>
+
+                                <p className={styles.item_desc}>Когда техническое задание составлено мы приступаем к разработке вариантов дизайна и виртуального взаимодействия пользователя с интерфейсом. В процессе данного этапа мы стараемся учесть все детали, которые могут лучше отразить бренд и цели ресурса.</p>
+                            </div>
+                        </motion.section>
+
+                        <motion.section variants={sectionAnimation} initial='hidden' whileInView='visible' viewport={{ once: true }}>
+                            <hr color='#000'/>
+
+                            <div className={styles.item}>
+                                <p className={styles.item_title}>РАЗРАБОТКА</p>
+
+                                <p className={styles.item_desc}>Этот этап включает в себя Frontend и Backend-разработку. Мы переносим дизайн сайта из графического редактора в браузер, используя языки разметки HTML и CSS. После этого мы работаем над адаптивностью сайта и добавляем на него анимации. Параллельно с этим ведется разработка серверной части приложения.</p>
+                            </div>
+                        </motion.section>
+
+                        <motion.section variants={sectionAnimation} initial='hidden' whileInView='visible' viewport={{ once: true }}>
+                            <hr color='#000'/>
+
+                            <div className={styles.item}>
+                                <p className={styles.item_title}>ТЕСТИРОВАНИЕ</p>
+
+                                <p className={styles.item_desc}>Проведение должного тестирования и отладки приложения является также неотъемлемой и важнейшей частью разработки веб-приложений. Здесь мы проверяем, как сайт будет вести себя на различных устройствах и устраняем различные недоработки.</p>
+                            </div>
+                        </motion.section>
+
+                        <motion.section variants={sectionAnimation} initial='hidden' whileInView='visible' viewport={{ once: true }}>
+                            <hr color='#000'/>
+
+                            <div className={styles.item}>
+                                <p className={styles.item_title}>РАЗВЕРТЫВАНИЕ</p>
+
+                                <p className={styles.item_desc}>Этап развертывания является завершающим этапом разработки. Мы загружаем веб-приложение на сервер и настраиваем соединение с базой данных, а также следим за тем, чтобы сайт стабильно функционировал.</p>
+                            </div>
+
+                            <hr color='#000'/>
+                        </motion.section>
                     </div>
 
-                    <div className={styles.flex_bg_2}>
-                        <img className={styles.right_bg_image}
-                            src='../../../../public/images/Grid2DevApproach.png'></img>
-                    </div>
-                </div>
+                    <div className={styles.title_box}>
+                        <motion.section variants={sectionRightAnimation} initial='hidden' whileInView='visible' viewport={{ once: true }}>
+                            <p className={styles.title}>ПОДХОД К<br/>РАЗРАБОТКЕ</p>
 
-                <div className={styles.center_container}>
-                    <h1 className={styles.title}>
-                        Подход к разработке
-                    </h1>
-
-                    <div className={styles.container}>
-                        <div className={styles.center}>
-                            <div className={styles.block_1_container}>
-                                <div className={styles.block_1}>
-                                    <div className={styles.flex}>
-                                        <div className={styles.labels_1}>
-                                            <h2>Проработка технического задания</h2>
-
-                                            <h4 className={styles.description_1}>Техническое задание — документ, в котором
-                                                зафиксированы требования к проекту. Он всегда предшествует созданию веб-сайта. С
-                                                помощью ТЗ определяется, каким в итоге будет продукт, минимизируется количество
-                                                ошибок и нейтрализуются разногласия. Когда разработка концепции сайта закончилась,
-                                                работа переходит на следующий этап — дизайн.</h4>
-                                        </div>
-
-                                        <div className={styles.pictures_1}>
-                                            <img className={styles.block_image} src='../../../../public/images/block_1.png'/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className={styles.block_2_container}>
-                                <div className={styles.block_2}>
-                                    <div className={styles.flex}>
-                                        <div className={styles.labels_2}>
-                                            <h2>Разработка дизайна</h2>
-
-                                            <h4 className={styles.description_2}>Изначально разработка дизайна сайта начинается
-                                                с прототипирования. Это схематическое расположение блоков. Прототипирование
-                                                делается для того, чтобы заказчик увидел главные элементы страниц, структуру
-                                                сайта. Если заказчика всё устраивает, разрабатывается полноценный дизайн.</h4>
-                                        </div>
-
-                                        <div className={styles.pictures_2}>
-                                            <img className={styles.block_image_small}
-                                                src='../../../../public/images/block_2.png'/>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className={styles.block_3}>
-                                    <div className={styles.flex}>
-                                        <div className={styles.labels_2}>
-                                            <h2>Разработка сайта</h2>
-
-                                            <h4 className={styles.description_2}>Процесс программирования — этап, связывающий
-                                                воедино систему управления, дизайн и интерфейс сайта. Также «реализуется» логика
-                                                портала, прописываются алгоритмы взаимодействия пользователя с сайтом и
-                                                взаимосвязи страницы с внешними ресурсами.</h4>
-                                        </div>
-
-                                        <div className={styles.pictures_2}>
-                                            <img className={styles.block_image_small}
-                                                src='../../../../public/images/block_3.png'/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className={styles.block_1_container}>
-                                <div className={styles.block_4}>
-                                    <div className={styles.flex}>
-                                        <div className={styles.labels_1}>
-                                            <h2>Загрузка сайта на хостинг</h2>
-
-                                            <h4 className={styles.description_1}>При локализации своего сайта на хостинге сайт, а
-                                                также вся содержащаяся на нём информация регулярно будут доступны для
-                                                пользователей.</h4>
-                                        </div>
-
-                                        <div className={styles.pictures_1}>
-                                            <img className={styles.block_image} src='../../../../public/images/block_4.png'/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            <p className={styles.description}>В ходе разработки мы делимся промежуточными результатами с заказчиками в обязательном порядке. Это помогает повысить ценность продукта и сократить сроки разработки. </p>
+                        </motion.section>
                     </div>
                 </div>
             </div>
+
+            <div className={styles.circle}></div>
         </>
     )
+}
+
+const sectionAnimation = {
+    hidden: {
+        x: -100,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: { delay: 0.4, type: "spring", stiffness: 75 }
+    },
+}
+
+const sectionRightAnimation = {
+    hidden: {
+        x: 100,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: { delay: 0.4, type: "spring", stiffness: 75 }
+    },
 }
 
 export default DevApproach

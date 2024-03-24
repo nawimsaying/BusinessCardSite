@@ -6,10 +6,14 @@ import PortfolioPage from './page/PortfolioPage';
 import AboutUsPage from './page/AboutUsPage';
 import ErrorPage from './page/ErrorPage';
 
+import styles from './App.module.css'
+
 function App() {
     return (
         <>
-            <ErrorPage/>
+            <div className={styles.crop}>
+                <HomePage/>
+            </div>
         </>
     );
 }
