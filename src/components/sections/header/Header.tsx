@@ -1,6 +1,5 @@
 // @ts-ignore
 import React, {useEffect, useState} from 'react';
-import NavBar from "../../UI/navbar/NavBar.tsx";
 import styles from './Header.module.css'
 
 function Header() {

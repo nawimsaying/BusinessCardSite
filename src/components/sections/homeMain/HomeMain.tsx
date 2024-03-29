@@ -1,11 +1,9 @@
-// @ts-ignore
 import React from 'react';
 import '/src/index.css'
 import styles from './HomeMain.module.css';
-import {color} from 'framer-motion';
 import ParticleImage, {ParticleOptions, Vector, forces, ParticleForce} from "react-particle-image";
 
-const HomeMain = () => {
+const HomeMain: React.FC = () => {
     const particleOptions: ParticleOptions = {
         filter: ({x, y, image}) => {
             // Get pixel
