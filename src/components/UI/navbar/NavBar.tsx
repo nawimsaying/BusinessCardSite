@@ -21,7 +21,7 @@ const Header = () => {
                     </div>
 
                     <ul className={classes.block_links}>
-                        <NavLink to="/home" className={classes.navLink} style={navLinkStyle('/home')}>
+                        <NavLink to="/" className={classes.navLink} style={navLinkStyle('/')}>
                             Главная
                         </NavLink>
                         <NavLink to="/portfolio" className={classes.navLink} style={navLinkStyle('/portfolio')}>
