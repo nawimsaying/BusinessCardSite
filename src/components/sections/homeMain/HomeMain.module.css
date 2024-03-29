@@ -1,163 +1,50 @@
-.container {
+.flex {
     width: 100%;
     height: 100vh;
     display: flex;
+    background-color: black;
     text-align: center;
-    overflow: visible;
-    position: relative;
 }
 
-.center_container {
-    height: fit-content;
+.container {
     margin: auto;
-    height: 100%;
-    width: 1266px;
-}
-
-.oval {
-    position: absolute;
-    top: 10%;
-    z-index: -1;
-    width: 100%;
-    height: 60%;
-    background: linear-gradient(to right, #41147c, #65006a);
-    border-radius: 70%;
-    opacity: 0.5;
-    filter: blur(100px);
 }
 
 .title {
-    font-size: 55px;
-    line-height: 50px;
-    font-weight: 500;
-}
-
-.des {
-    color: #818181;
-    text-align: center;
-    line-height: 25px;
-    padding-left: 30%;
-    padding-right: 30%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-}
-
-.main_block {
-    height: 80%;
-}
-
-.bottom_block {
-    height: 20%;
-}
-
-.text_container_flex {
-    text-align: center;
-    display: flex;
-    width: 100%;
-    height: 85vh;
-}
-
-.text_container {
-    height: fit-content;
-    margin: auto;
-}
-
-p {
-    font-size: x-small;
-    color: lightgrey;
-    margin-top: 10px;
-}
-
-.button_feedback {
-    display: block;
-    width: 255px;
-    height: 54px;
-    color: #FFF;
-    margin-top: 20px;
-    background: linear-gradient(to right, #BE00DE, #8300D1);
-    border-radius: 100px;
-    border: none;
-    font-family: 'Jura', sans-serif;
+    font-family: "Bai Jamjuree", sans-serif;
     font-weight: 600;
-    font-size: medium;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
+    font-style: normal;
+    font-size: 187px;
 }
 
-.email_review {
-    display: flex;
+.title_particles {
+    width: 1350px;
+}
+
+.desc_container {
+    position: absolute;
     width: 100%;
-    height: 100px;
-}
-
-.email_input {
-    align-items:  start;
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    width: 30%;
-    height: 100%;
-}
-
-.empty {
-    width: 40%;
-    height: 100%;
-}
-
-.grade {
-    align-items: flex-end;
-    height: 100%;
+    bottom: 25px;
 }
 
 .description {
-    margin-top: 10px;
-    color: #4D4D4D;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
 }
 
-@media (max-width: 1100px) {
-    .des {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-
-    .email_input {
-        display: none;
-    }
-
-    .empty {
-        display: none;
-    }
-
-    .email_review {
-        justify-content: center;
+@media(max-width: 1700px) {
+    .title {
+        font-family: "Bai Jamjuree", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 13vw;
     }
 }
 
-@media (max-width: 500px) {
-    .center_container {
-        height: fit-content;
-        margin: auto;
-        height: 100%;
+@media(max-width: 1350px) {
+    .title_particles {
         width: 100%;
-    }
-
-    .bottom_block {
-        height: 20%;
-        width: 100%;
-    }
-}
-
-@media (max-height: 520px) {
-    .bottom_block {
-        display: none;
-        width: 100vw;
-    }
-
-    .text_container_flex {
-        text-align: center;
-        display: flex;
-        width: 100%;
-        height: 100vh;
     }
 }

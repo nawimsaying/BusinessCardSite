@@ -1,51 +1,55 @@
-// @ts-ignore
 import React from 'react';
 import '/src/index.css'
 import styles from './HomeMain.module.css';
+import ParticleImage, {ParticleOptions, Vector, forces, ParticleForce} from "react-particle-image";
 
-import EmailHomeInput from "../../UI/emailHomeInput/EmailHomeInput.tsx";
-import Grade from "../../UI/grade/Grade.tsx";
+const HomeMain: React.FC = () => {
+    const particleOptions: ParticleOptions = {
+        filter: ({x, y, image}) => {
+            // Get pixel
+            const pixel = image.get(x, y);
+            // Make a particle for this pixel if blue > 50 (range 0-255)
+            return pixel.b > 55;
+        },
+        color: ({}) => "#FFF",
+        radius: () => Math.random() * 1.5 + 0.5,
+        mass: () => 15,
+        friction: () => 0.5,
+        initialPosition: ({canvasDimensions}) => {
+            return new Vector(canvasDimensions.width / 2, canvasDimensions.height / 2);
+        }
+    };
+    const motionForce = (x: number, y: number): ParticleForce => {
+        return forces.disturbance(x, y, 45);
+    };
 
-const HomeMain = () => {
+
     return (
         <>
-            <div className={styles.container}>
-                <div className={styles.oval}></div>
+            <div className={styles.flex}>
+                <div className={styles.container}>
 
-                <div className={styles.center_container}>
-                    <div className={styles.main_block}>
-                        <div className={styles.text_container_flex}>
-                            <div className={styles.text_container}>
-                                <p className={styles.title}>Разработаем<br/>сайт под ключ</p>
-                                <h3 className={styles.des}>Создаем виртуальные пространства для Вашего успеха! От визитки до интернет-магазина – Ваш сайт, Ваша история, Ваш успех в онлайн-мире.</h3>
-                                <button className={styles.button_feedback} onClick={handleButtonClick}>Связаться с нами</button>
-                            </div>
-                        </div>
-                    </div>
+                    <ParticleImage className={styles.title_particles}
+                                   src={"public/svg/VIRTSPACE.svg"}
+                                   width={Number(1350)}
+                                   scale={1}
+                                   entropy={20}
+                                   maxParticles={4000}
+                                   particleOptions={particleOptions}
+                                   mouseMoveForce={motionForce}
+                                   touchMoveForce={motionForce}
+                                   backgroundColor="transparent"
+                    />
 
-                    <div className={styles.bottom_block}>
-                        <div className={styles.email_review}>
-                            <div className={styles.email_input}>
-                                <EmailHomeInput/>
+                </div>
 
-                                <h5 className={styles.description}>Это не подписка на рассылку.<br/>Мы используем почту только для связи.</h5>
-                            </div>
-
-                            <div className={styles.empty}></div>
-
-                            <div className={styles.grade}>
-                                <Grade/>
-                            </div>
-                        </div>
-                    </div>
+                <div className={styles.desc_container}>
+                    <p className={styles.description}>Создаем виртуальные пространства для Вашего успеха. От визитки до
+                        интернет-магазина.</p>
                 </div>
             </div>
         </>
     );
-};
-
-const handleButtonClick = () => {
-
 };
 
 export default HomeMain;

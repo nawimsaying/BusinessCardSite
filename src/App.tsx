@@ -1,16 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+// @ts-ignore
+import React, {useEffect, useState} from 'react';
 
-import Header from "./components/sections/header/Header.tsx";
-import AppRouter from "./components/AppRouter.tsx";
+import HomePage from './page/HomePage';
 
-const App: React.FC = () => {
+
+import styles from './App.module.css'
+
+function App() {
     return (
-        <Router>
-            <Header/>
-            <AppRouter/>
-        </Router>
+        <>
+            <div className={styles.crop}>
+                <HomePage/>
+            </div>
+        </>
     );
-};
+}
 
 export default App;

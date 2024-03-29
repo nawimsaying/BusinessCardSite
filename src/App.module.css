@@ -1,12 +1,14 @@
-
 * {
     margin: 0;
     padding: 0;
 
 }
 
-
 .container {
     height: 3000px;
     background: #111111;
+}
+
+.crop {
+    overflow-x: clip;
 }

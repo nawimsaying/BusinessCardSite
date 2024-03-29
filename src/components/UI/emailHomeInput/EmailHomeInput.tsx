@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import '/src/index.css'
 import styles from "./EmailHomeInput.module.css";
 
-const EmailHomeInput = () => {
+const EmailHomeInput: React.FC = () => {
     const [inputValue, setInputValue] = useState('');
+    // @ts-ignore
     const [result, setResult] = useState('');
 
     const handleButtonClick = () => {

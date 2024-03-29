@@ -2,7 +2,7 @@ import React from 'react';
 import '/src/index.css'
 import styles from './PortfolioMain.module.css';
 
-const PortfolioMain = () => {
+const PortfolioMain: React.FC = () => {
     return (
         <>
             <div className={styles.container}>
@@ -13,7 +13,8 @@ const PortfolioMain = () => {
                         <div className={styles.text_container_flex}>
                             <div className={styles.text_container}>
                                 <p className={styles.title}>Наши работы</p>
-                                <button className={styles.button_feedback} onClick={handleButtonClick}>Подробнее</button>
+                                <button className={styles.button_feedback} onClick={handleButtonClick}>Подробнее
+                                </button>
                             </div>
                         </div>
                     </div>
