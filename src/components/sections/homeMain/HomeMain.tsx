@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '/src/index.css'
 import styles from './HomeMain.module.css';
 import ParticleImage, {ParticleOptions, Vector, forces, ParticleForce} from "react-particle-image";
+import { motion } from 'framer-motion'
 
 const HomeMain: React.FC = () => {
     const particleOptions: ParticleOptions = {
@@ -19,17 +20,27 @@ const HomeMain: React.FC = () => {
             return new Vector(canvasDimensions.width / 2, canvasDimensions.height / 2);
         }
     };
+
     const motionForce = (x: number, y: number): ParticleForce => {
         return forces.disturbance(x, y, 45);
     };
 
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            setIsVisible(true);
+    }, 1500); // Пример задержки в 1 секунду
+    
+    return () => clearTimeout(timeoutId);
+    }, []); // Эффект запускается только при монтировании компонента
 
     return (
         <>
             <div className={styles.flex}>
                 <div className={styles.container}>
 
-                    <ParticleImage className={styles.title_particles}
+                    {/* <ParticleImage className={styles.title_particles}
                                    src={"public/svg/VIRTSPACE.svg"}
                                    width={Number(1350)}
                                    scale={1}
@@ -39,17 +50,35 @@ const HomeMain: React.FC = () => {
                                    mouseMoveForce={motionForce}
                                    touchMoveForce={motionForce}
                                    backgroundColor="transparent"
-                    />
+                    /> */}
 
+                    <motion.p initial='hidden' whileInView='visible' variants={titleAnimation} className={styles.title} viewport={{once: true}}>VIRTSPACE</motion.p>
                 </div>
 
                 <div className={styles.desc_container}>
-                    <p className={styles.description}>Создаем виртуальные пространства для Вашего успеха. От визитки до
-                        интернет-магазина.</p>
+                    <motion.p initial={{ opacity: 0, y: 50 }} 
+                        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }} 
+                        transition={{ duration: 0.6, type: "spring", stiffness: 20 }} 
+                        viewport={{once: true}} 
+                        className={styles.description}>
+                            Создаем современные веб-приложения. От визитки до интернет-магазина.
+                    </motion.p>
                 </div>
             </div>
         </>
     );
 };
+
+const titleAnimation = {
+    hidden: {
+        y: 100,
+        opacity: 0,
+    },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: { delay: 0.6, type: "spring", stiffness: 20 }
+    },
+}
 
 export default HomeMain;

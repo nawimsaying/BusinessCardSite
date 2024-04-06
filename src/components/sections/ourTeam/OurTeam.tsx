@@ -9,101 +9,131 @@ const OurTeam: React.FC = () => {
             <div className={styles.flex}>
                 <div className={styles.container}>
                     <motion.section initial='hidden' whileInView='visible' viewport={{once: true}}>
-                        <motion.p variants={leftBlockAnimation} className={styles.section_name}>/ КОМАНДА</motion.p>
+                        <motion.p variants={nameAnimation} className={styles.section_name}>/ КОМАНДА</motion.p>
 
-                        <motion.div variants={leftBlockAnimation} className={styles.block}>
-                            <div className={styles.block_photo}>
+                        <div className={styles.block}>
+                            <motion.div variants={leftBlockAnimation} className={styles.block_photo}>
                                 <img className={styles.picture} src='public\images\testimg2.png'/>
-                            </div>
+                            </motion.div>
 
                             <div className={styles.text_block}>
-                                <p className={styles.name}>ДАНИИЛ</p>
+                                <motion.div variants={leftBlockTextAnimation}>
+                                    <p className={styles.name}>ДАНИИЛ</p>
 
-                                <p className={styles.speciality}>ДИЗАЙНЕР</p>
+                                    <p className={styles.speciality}>ДИЗАЙНЕР</p>
+                                </motion.div>
 
-                                <div className={styles.social_networks}>
-                                    <a className={styles.links} href="https://vk.com/uknowimsaying" target="_blank">
-                                        <img className={styles.link_img} src='public\images\vklogo.png'/>
-                                    </a>
+                                <motion.div variants={leftBlockSocialAnimation}>
+                                    <div className={styles.social_networks}>
+                                        <a className={styles.links} href="https://vk.com/uknowimsaying" target="_blank">
+                                            <img className={styles.link_img} src='public\images\vklogo.png'/>
+                                        </a>
 
-                                    <a href="https://t.me/opopee" target="_blank">
-                                        <img className={styles.link_img} src='public\images\tglogo.png'/>
-                                    </a>
-                                </div>
+                                        <a href="https://t.me/opopee" target="_blank">
+                                            <img className={styles.link_img} src='public\images\tglogo.png'/>
+                                        </a>
+                                    </div>
+                                </motion.div>
 
-                                <div className={styles.description_block}>
-                                    <hr color='#FFF' className={styles.hr}></hr>
-                                    <p className={styles.desc_text}>VirtSpace - молодая студия веб-разработки,
-                                        занимающаяся созданием современных сайтов - от визитки до интернет-магазина.</p>
-                                </div>
+                                <motion.div variants={leftBlockDescAnimation}>
+                                    <div className={styles.description_block}>
+                                        <hr color='#FFF' className={styles.hr}></hr>
+                                        <p className={styles.desc_text}>VirtSpace - молодая студия веб-разработки,
+                                            занимающаяся созданием современных сайтов - от визитки до интернет-магазина.</p>
+                                    </div>
+                                </motion.div>
                             </div>
-                        </motion.div>
+                        </div>
                     </motion.section>
 
                     <motion.section initial='hidden' whileInView='visible' viewport={{once: true}}>
-                        <motion.div variants={rightBlockAnimation} className={styles.block_right}>
-                            <div className={styles.block_photo_right}>
+                        <div className={styles.block_right}>
+                            <motion.div variants={rightBlockAnimation} className={styles.block_photo_right}>
                                 <img className={styles.picture} src='public\images\testimg2.png'/>
-                            </div>
+                            </motion.div>
 
                             <div className={styles.text_block}>
-                                <p className={styles.name}>ДАНИИЛ</p>
+                                <motion.div variants={rightBlockTextAnimation}>
+                                    <p className={styles.name}>ДАНИИЛ</p>
 
-                                <p className={styles.speciality}>ДИЗАЙНЕР</p>
+                                    <p className={styles.speciality}>ДИЗАЙНЕР</p>
+                                </motion.div>
 
-                                <div className={styles.social_networks_right}>
-                                    <a className={styles.links_right} href="https://vk.com/uknowimsaying"
-                                       target="_blank">
-                                        <img className={styles.link_img} src='public\images\vklogo.png'/>
-                                    </a>
+                                <motion.div variants={rightBlockSocialAnimation}>
+                                    <div className={styles.social_networks_right}>
+                                        <a className={styles.links_right} href="https://vk.com/uknowimsaying"
+                                        target="_blank">
+                                            <img className={styles.link_img} src='public\images\vklogo.png'/>
+                                        </a>
 
-                                    <a href="https://t.me/opopee" target="_blank">
-                                        <img className={styles.link_img} src='public\images\tglogo.png'/>
-                                    </a>
-                                </div>
+                                        <a href="https://t.me/opopee" target="_blank">
+                                            <img className={styles.link_img} src='public\images\tglogo.png'/>
+                                        </a>
+                                    </div>
+                                </motion.div>
 
-                                <div className={styles.description_block}>
-                                    <p className={styles.desc_text_right}>VirtSpace - молодая студия веб-разработки,
-                                        занимающаяся созданием современных сайтов - от визитки до интернет-магазина.</p>
-                                    <hr color='#FFF' className={styles.hr}></hr>
-                                </div>
+                                <motion.div variants={rightBlockDescAnimation}>
+                                    <div className={styles.description_block}>
+                                        <p className={styles.desc_text_right}>VirtSpace - молодая студия веб-разработки,
+                                            занимающаяся созданием современных сайтов - от визитки до интернет-магазина.</p>
+                                        <hr color='#FFF' className={styles.hr}></hr>
+                                    </div>
+                                </motion.div>
                             </div>
-                        </motion.div>
+                        </div>
                     </motion.section>
 
                     <motion.section initial='hidden' whileInView='visible' viewport={{once: true}}>
-                        <motion.div variants={leftBlockAnimation} className={styles.block}>
-                            <div className={styles.block_photo}>
+                        <div className={styles.block}>
+                            <motion.div variants={leftBlockAnimation} className={styles.block_photo}>
                                 <img className={styles.picture} src='public\images\testimg2.png'/>
-                            </div>
+                            </motion.div>
 
                             <div className={styles.text_block}>
-                                <p className={styles.name}>ДАНИИЛ</p>
+                                <motion.div variants={leftBlockTextAnimation}>
+                                    <p className={styles.name}>ДАНИИЛ</p>
 
-                                <p className={styles.speciality}>ДИЗАЙНЕР</p>
+                                    <p className={styles.speciality}>ДИЗАЙНЕР</p>
+                                </motion.div>
 
-                                <div className={styles.social_networks}>
-                                    <a className={styles.links} href="https://vk.com/uknowimsaying" target="_blank">
-                                        <img className={styles.link_img} src='public\images\vklogo.png'/>
-                                    </a>
+                                <motion.div variants={leftBlockSocialAnimation}>
+                                    <div className={styles.social_networks}>
+                                        <a className={styles.links} href="https://vk.com/uknowimsaying" target="_blank">
+                                            <img className={styles.link_img} src='public\images\vklogo.png'/>
+                                        </a>
 
-                                    <a href="https://t.me/opopee" target="_blank">
-                                        <img className={styles.link_img} src='public\images\tglogo.png'/>
-                                    </a>
-                                </div>
+                                        <a href="https://t.me/opopee" target="_blank">
+                                            <img className={styles.link_img} src='public\images\tglogo.png'/>
+                                        </a>
+                                    </div>
+                                </motion.div>
 
-                                <div className={styles.description_block}>
-                                    <hr color='#FFF' className={styles.hr}></hr>
-                                    <p className={styles.desc_text}>VirtSpace - молодая студия веб-разработки,
-                                        занимающаяся созданием современных сайтов - от визитки до интернет-магазина.</p>
-                                </div>
+                                <motion.div variants={leftBlockDescAnimation}>
+                                    <div className={styles.description_block}>
+                                        <hr color='#FFF' className={styles.hr}></hr>
+                                        <p className={styles.desc_text}>VirtSpace - молодая студия веб-разработки,
+                                            занимающаяся созданием современных сайтов - от визитки до интернет-магазина.</p>
+                                    </div>
+                                </motion.div>
                             </div>
-                        </motion.div>
+                        </div>
                     </motion.section>
                 </div>
             </div>
         </>
     )
+}
+
+const nameAnimation = {
+    hidden: {
+        x: -100,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 0.6, type: "spring", stiffness: 50}
+    },
 }
 
 const leftBlockAnimation = {
@@ -114,7 +144,43 @@ const leftBlockAnimation = {
     visible: {
         x: 0,
         opacity: 1,
-        transition: {delay: 0.4, type: "spring", stiffness: 75}
+        transition: {delay: 0.8, type: "spring", stiffness: 50}
+    },
+}
+
+const leftBlockTextAnimation = {
+    hidden: {
+        x: -25,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 1.2, type: "spring", stiffness: 50}
+    },
+}
+
+const leftBlockSocialAnimation = {
+    hidden: {
+        x: -25,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 1.5, type: "spring", stiffness: 50}
+    },
+}
+
+const leftBlockDescAnimation = {
+    hidden: {
+        x: -25,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 1.8, type: "spring", stiffness: 50}
     },
 }
 
@@ -126,7 +192,43 @@ const rightBlockAnimation = {
     visible: {
         x: 0,
         opacity: 1,
-        transition: {delay: 0.4, type: "spring", stiffness: 75}
+        transition: {delay: 0.8, type: "spring", stiffness: 50}
+    },
+}
+
+const rightBlockTextAnimation = {
+    hidden: {
+        x: 25,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 1.2, type: "spring", stiffness: 50}
+    },
+}
+
+const rightBlockSocialAnimation = {
+    hidden: {
+        x: 25,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 1.5, type: "spring", stiffness: 50}
+    },
+}
+
+const rightBlockDescAnimation = {
+    hidden: {
+        x: 25,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 1.8, type: "spring", stiffness: 50}
     },
 }
 

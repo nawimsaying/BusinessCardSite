@@ -32,21 +32,20 @@ const Technologies = () => {
         <>
             <div className={styles.flex}>
                 <div className={styles.container}>
-                    <motion.section variants={sectionAnimation} initial='hidden' whileInView='visible'
-                                    viewport={{once: true}}>
-                        <p className={styles.section_name}>/ СТЕК</p>
+                    <motion.section initial='hidden' whileInView='visible' viewport={{once: true}}>
+                        <motion.p variants={nameAnimation} className={styles.section_name}>/ СТЕК</motion.p>
 
                         <div className={styles.container_flex}>
                             <div className={styles.text_block}>
-                                <p className={styles.title}>ТЕХНОЛОГИИ</p>
+                                <motion.p variants={sectionAnimationFirst} className={styles.title}>ТЕХНОЛОГИИ</motion.p>
 
-                                <p className={styles.description}>Для разработки мы используем только современные и
-                                    актуальные средства, чтобы Ваше приложение прослужило дольше и не нуждалось в
-                                    серьезных обновлениях.</p>
+                                <motion.p variants={sectionAnimationSecond} className={styles.description}>Для разработки мы используем только современные и
+                                    актуальные средства, чтобы Ваше приложение прослужило как можно дольше и не нуждалось в
+                                    серьезных обновлениях.</motion.p>
                             </div>
 
                             <div className={styles.right_block}>
-                                <div className={styles.buttons_group}>
+                                <motion.div variants={sectionAnimationThird} className={styles.buttons_group}>
                                     <button className={activeButton === 1 ? styles.active_btn : styles.unactive_btn}
                                             type='button' onClick={() => handleButtonClick(1)}>FRONTEND
                                     </button>
@@ -58,12 +57,12 @@ const Technologies = () => {
                                     <button className={activeButton === 3 ? styles.active_btn : styles.unactive_btn}
                                             type='button' onClick={() => handleButtonClick(3)}>DEVOPS
                                     </button>
-                                </div>
+                                </motion.div>
 
-                                <div className={styles.desc_block}>
+                                <motion.div variants={sectionAnimationFourth} className={styles.desc_block}>
                                     <p id='text_p'
                                        className={isChanging ? styles.desc_text_out : styles.desc_text_in}>{text}</p>
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
                     </motion.section>
@@ -73,7 +72,7 @@ const Technologies = () => {
     )
 }
 
-const sectionAnimation = {
+const nameAnimation = {
     hidden: {
         x: -100,
         opacity: 0,
@@ -81,7 +80,55 @@ const sectionAnimation = {
     visible: {
         x: 0,
         opacity: 1,
-        transition: {delay: 0.4, type: "spring", stiffness: 75}
+        transition: {delay: 0.6, type: "spring", stiffness: 50}
+    },
+}
+
+const sectionAnimationFirst = {
+    hidden: {
+        x: -100,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 0.8, type: "spring", stiffness: 50}
+    },
+}
+
+const sectionAnimationSecond = {
+    hidden: {
+        x: -100,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 1.2, type: "spring", stiffness: 50}
+    },
+}
+
+const sectionAnimationThird = {
+    hidden: {
+        x: 100,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 0.8, type: "spring", stiffness: 50}
+    },
+}
+
+const sectionAnimationFourth = {
+    hidden: {
+        x: 100,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 1.2, type: "spring", stiffness: 50}
     },
 }
 

@@ -43,17 +43,16 @@ const Contact: React.FC = () => {
         <div id="contact">
             <div className={styles.flex}>
                 <div className={styles.container}>
-                    <motion.section variants={sectionAnimation} initial='hidden' whileInView='visible'
-                                    viewport={{once: true}}>
-                        <p className={styles.section_name}>/ КОНТАКТЫ</p>
+                    <motion.section initial='hidden' whileInView='visible' viewport={{once: true}}>
+                        <motion.p variants={nameAnimation} className={styles.section_name}>/ КОНТАКТЫ</motion.p>
+
                         <div className={styles.container_flex}>
                             <div className={styles.text_block}>
-                                <p className={styles.title}>СВЯЗАТЬСЯ<br/>С НАМИ</p>
-                                <p className={styles.description}>Оставьте свой адрес элестронной почты и мы сами
-                                    Вам напишем!</p>
+                                <motion.p variants={sectionAnimationFirst} className={styles.title}>СВЯЗАТЬСЯ<br/>С НАМИ</motion.p>
+                                <motion.p variants={sectionAnimationSecond} className={styles.description}>Оставьте свой адрес электронной почты и мы Вам напишем!</motion.p>
                             </div>
 
-                            <div className={styles.right_block}>
+                            <motion.div variants={sectionAnimationThird} className={styles.right_block}>
                                 <div className={styles.desc_block}>
                                     <input
                                         placeholder='EMAIL АДРЕС'
@@ -67,7 +66,7 @@ const Contact: React.FC = () => {
                                 <div className={styles.bottom_block}>
                                     <p className={styles.bottom_desc}>virtspaceweb@gmail.com</p>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </motion.section>
                 </div>
@@ -76,7 +75,7 @@ const Contact: React.FC = () => {
     )
 }
 
-const sectionAnimation = {
+const nameAnimation = {
     hidden: {
         x: -100,
         opacity: 0,
@@ -84,7 +83,43 @@ const sectionAnimation = {
     visible: {
         x: 0,
         opacity: 1,
-        transition: {delay: 0.4, type: "spring", stiffness: 75}
+        transition: {delay: 0.6, type: "spring", stiffness: 50}
+    },
+}
+
+const sectionAnimationFirst = {
+    hidden: {
+        x: -100,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 0.8, type: "spring", stiffness: 50}
+    },
+}
+
+const sectionAnimationSecond = {
+    hidden: {
+        x: -100,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 1.2, type: "spring", stiffness: 50}
+    },
+}
+
+const sectionAnimationThird = {
+    hidden: {
+        x: 100,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 1.6, type: "spring", stiffness: 50}
     },
 }
 

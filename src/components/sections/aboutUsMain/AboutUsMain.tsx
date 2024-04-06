@@ -10,7 +10,7 @@ const AboutUsMain: React.FC = () => {
             <div className={styles.flex}>
                 <div className={styles.container}>
                     <motion.section initial='hidden' whileInView='visible' viewport={{once: true}}>
-                        <motion.p variants={titleAnimation} className={styles.section_name}>/ О НАС</motion.p>
+                        <motion.p variants={nameAnimation} className={styles.section_name}>/ О НАС</motion.p>
 
                         <motion.p variants={titleAnimation} className={styles.text}>ПЕРСПЕКТИВНАЯ КОМАНДА МОЛОДЫХ
                             РАЗРАБОТЧИКОВ ОБЯЗАТЕЛЬНО ПОМОЖЕТ СОЗДАТЬ <span
@@ -21,11 +21,13 @@ const AboutUsMain: React.FC = () => {
                     </motion.section>
 
                     <motion.section initial='hidden' whileInView='visible' viewport={{once: true}}>
-                        <motion.div variants={bottomBlockAnimation}>
-                            <div className={styles.bottom_flex}>
+                        <div className={styles.bottom_flex}>
+                            <motion.div variants={bottomBlockAnimationFirst}>
                                 <img className={styles.arw} src='public\svg\arw.svg'></img>
+                            </motion.div>
 
-                                <div className={styles.block_first}>
+                            <div className={styles.block_first}>
+                                <motion.div variants={bottomBlockAnimationSecond}>
                                     <p className={styles.description}>VirtSpace - молодая студия веб-разработки,
                                         занимающаяся созданием современных сайтов. Наша небольшая, но перспективная
                                         команда всегда готова поработать над Вашим проектом!</p>
@@ -33,18 +35,20 @@ const AboutUsMain: React.FC = () => {
                                     <button className={styles.btn_about_us} onClick={scrollToContact}
                                             type='button'>Написать нам
                                     </button>
-                                </div>
-
-                                <div className={styles.block_second}>
-                                    <p className={styles.description}>Мы горим идеей создавать новые современные сайты,
-                                        которые будут актуальны еще долгие годы и недороги в процессе содержания.</p>
-                                </div>
+                                </motion.div>
                             </div>
 
-                            <button className={styles.btn_about_us_mobile} onClick={scrollToContact}
-                                    type='button'>Написать нам
-                            </button>
-                        </motion.div>
+                            <div className={styles.block_second}>
+                                <motion.div variants={bottomBlockAnimationThird}>
+                                    <p className={styles.description}>Мы горим идеей создавать новые и современные сайты,
+                                        которые будут актуальны еще долгие годы и недороги в процессе содержания.</p>
+                                </motion.div>
+                            </div>
+                        </div>
+
+                        <button className={styles.btn_about_us_mobile} onClick={scrollToContact}
+                                type='button'>Написать нам
+                        </button>
                     </motion.section>
                 </div>
             </div>
@@ -63,6 +67,18 @@ const scrollToContact = () => {
     }
 };
 
+const nameAnimation = {
+    hidden: {
+        x: -100,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 0.6, type: "spring", stiffness: 50}
+    },
+}
+
 const titleAnimation = {
     hidden: {
         x: -100,
@@ -71,11 +87,11 @@ const titleAnimation = {
     visible: {
         x: 0,
         opacity: 1,
-        transition: {delay: 0.4, type: "spring", stiffness: 75}
+        transition: {delay: 0.8, type: "spring", stiffness: 50}
     },
 }
 
-const bottomBlockAnimation = {
+const bottomBlockAnimationFirst = {
     hidden: {
         y: -50,
         opacity: 0,
@@ -83,7 +99,31 @@ const bottomBlockAnimation = {
     visible: {
         y: 0,
         opacity: 1,
-        transition: {delay: 0.4, type: "spring", stiffness: 75}
+        transition: {delay: 0.4, type: "spring", stiffness: 50}
+    },
+}
+
+const bottomBlockAnimationSecond = {
+    hidden: {
+        y: -50,
+        opacity: 0,
+    },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: {delay: 0.8, type: "spring", stiffness: 50}
+    },
+}
+
+const bottomBlockAnimationThird = {
+    hidden: {
+        y: -50,
+        opacity: 0,
+    },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: {delay: 1.0, type: "spring", stiffness: 50}
     },
 }
 

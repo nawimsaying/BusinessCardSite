@@ -15,6 +15,10 @@ const HomePage = () => {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
+        document.title = 'VirtSpace';
+    })
+
+    useEffect(() => {
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
@@ -23,47 +27,19 @@ const HomePage = () => {
 
     return (
         <>
-            <AnimatePresence>
-                {
-                    loading ?
-                        (
-                            <motion.div key="loader"
-                                        initial={{opacity: 1}}
-                                        exit={{opacity: 0}}
-                                        style={{
-                                            position: 'absolute',
-                                            top: 0,
-                                            left: 0,
-                                            right: 0,
-                                            bottom: 0,
-                                            display: 'flex',
-                                            justifyContent: 'center',
-                                            backgroundColor: '#000',
-                                            alignItems: 'center'
-                                        }}
-                            >
-                                <HashLoader color={'#FFF'} loading={loading} size={50} aria-label="Loading Spinner"
-                                            data-testid="loader"/>
-                            </motion.div>
-                        )
-                        :
-                        (
-                            <motion.div key="content"
-                                        initial={{opacity: 0}}
-                                        animate={{opacity: 1, transition: {delay: 0.25, duration: 0.25}}}
-                                        exit={{opacity: 0}}>
+            <motion.div key="content"
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1, transition: {delay: 0.25, duration: 0.25}}}
+                        exit={{opacity: 0}}>
 
-                                <Header/>
-                                <HomeMain/>
-                                <AboutUsMain/>
-                                <DevApproach/>
-                                <OurTeam/>
-                                <Technologies/>
-                                <Contact/>
-                            </motion.div>
-                        )
-                }
-            </AnimatePresence>
+                {/* <Header/> */}
+                <HomeMain/>
+                <AboutUsMain/>
+                <DevApproach/>
+                <OurTeam/>
+                <Technologies/>
+                <Contact/>
+            </motion.div>
         </>
     );
 };
