@@ -1,8 +1,10 @@
+import React, {useEffect, useState} from 'react';
 // @ts-ignore
-import React, {useEffect, useState, useRef} from 'react';
 import {HashLoader} from 'react-spinners';
+// @ts-ignore
 import {motion, AnimatePresence} from 'framer-motion';
 
+// @ts-ignore
 import Header from '../components/sections/header/Header';
 import HomeMain from '../components/sections/homeMain/HomeMain';
 import AboutUsMain from '../components/sections/aboutUsMain/AboutUsMain';
@@ -11,7 +13,8 @@ import OurTeam from '../components/sections/ourTeam/OurTeam';
 import Technologies from '../components/sections/technologies/Technologies';
 import Contact from '../components/sections/contact/Contact';
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
+    // @ts-ignore
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {

@@ -10,7 +10,7 @@ export class UserFeedBackApiClient implements IUserFeedbackSource {
 
     async sendEmail(email: string): Promise<Result<UserFeedback>> {
         try {
-            const response: AxiosResponse<any> = await this.client.post(`http://5.35.82.27:82/api/Feedbacks/sendmail`, {
+            const response: AxiosResponse<any> = await this.client.post(`https://virtspace.dev/server/api/Feedbacks/sendmail`, {
                 email: email,
             });
 
