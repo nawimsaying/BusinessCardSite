@@ -84,31 +84,32 @@
 .desc_btn {
     width: 20%;
     height: 56px;
-    color: #FFF;
+    color: #929292;
     font-family: "Raleway", sans-serif;
     font-weight: 500;
     font-size: 18px;
     background-color: transparent;
     border: none;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     transition: 200ms;
 }
 
 .desc_btn:hover {
-    background-color: #ffffff11;
-    transition: 200ms;
+    color: #FFF;
+    transition: 50ms;
 }
 
 .desc_btn:active {
-    background-color: #FFF;
-    color: #000;
+    background-color: #ffffff0c;
+    color: #FFF;
     transition: 50ms;
 }
 
 .bottom_block {
     height: 48px;
     margin-top: 42px;
+    display: flex;
 }
 
 .bottom_desc {
@@ -117,6 +118,16 @@
     font-weight: 500;
     font-size: 18px;
     text-align: end;
+    width: 50%;
+}
+
+.status {
+    color: #5C5C5C;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: start;
+    width: 50%;
 }
 
 @media(max-width: 1700px) {
@@ -147,9 +158,9 @@
     }
 
     .desc_btn {
-        width: 115px;
+        width: 25%;
         height: 56px;
-        color: #FFF;
+        color: #929292;
         font-family: "Raleway", sans-serif;
         font-weight: 500;
         font-size: 18px;
@@ -222,7 +233,7 @@
     .desc_btn {
         width: 28vw;
         height: 56px;
-        color: #FFF;
+        color: #929292;
         font-family: "Raleway", sans-serif;
         font-weight: 500;
         font-size: 4vw;

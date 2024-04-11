@@ -44,12 +44,37 @@ const HomeMain: React.FC = () => {
                 </div>
 
                 <div className={styles.desc_container}>
+<<<<<<< Updated upstream
                     <p className={styles.description}>Создаем виртуальные пространства для Вашего успеха. От визитки до
                         интернет-магазина.</p>
+=======
+                    <motion.p initial={{ opacity: 0, y: 50 }} 
+                        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }} 
+                        transition={{ type: "spring", stiffness: 20 }} 
+                        viewport={{once: true}} 
+                        className={styles.description}>
+                            Создаем современные веб-приложения. От визитки до интернет-магазина.
+                    </motion.p>
+>>>>>>> Stashed changes
                 </div>
             </div>
         </>
     );
 };
 
+<<<<<<< Updated upstream
+=======
+const titleAnimation = {
+    hidden: {
+        y: 100,
+        opacity: 0,
+    },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: { delay: 0.2, type: "spring", stiffness: 20 }
+    },
+}
+
+>>>>>>> Stashed changes
 export default HomeMain;

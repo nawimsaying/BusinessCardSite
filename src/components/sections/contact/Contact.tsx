@@ -1,8 +1,10 @@
-import React, {useState} from 'react';
-import {motion} from 'framer-motion';
-import {UserFeedbackRepository} from "../../../architecture/feedBackUser/UserFeedbackRepository.ts";
-import {UserFeedBackApiClient} from "../../../architecture/feedBackUser/UserFeedBackApiClient.ts";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { UserFeedbackRepository } from "../../../architecture/feedBackUser/UserFeedbackRepository.ts";
+import { UserFeedBackApiClient } from "../../../architecture/feedBackUser/UserFeedBackApiClient.ts";
 import styles from './Contact.module.css';
+import { BeatLoader } from 'react-spinners';
+import * as EmailValidator from 'email-validator';
 
 const Contact: React.FC = () => {
     // @ts-ignore
@@ -10,22 +12,35 @@ const Contact: React.FC = () => {
     // @ts-ignore
     const [error, setError] = useState<string | null>(null);
     const [email, setEmail] = useState("");
+    const [description, setDescription] = useState("");
 
     const sendEmail = async (email: string) => {
         try {
             setLoading(true);
             setError(null);
-            const repository = new UserFeedbackRepository(new UserFeedBackApiClient());
-            await repository.sendEmail(email);
-            console.log("Email успешно отправлен");
-        } catch (error: any) {
-            console.error("Ошибка при отправке email:", error);
+            if (EmailValidator.validate(email)) {
+                // const repository = new UserFeedbackRepository(new UserFeedBackApiClient());
+                // await repository.sendEmail(email);
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                setDescription('Email успешно отправлен!')
+                console.log("Email успешно отправлен");
+            }
+            else {
+                setDescription('Почта введена некорректно.')
+                console.log("При вводе Email допущены ошибки");
+            }
+        } 
+        catch (error: any) {
+            console.error("Ошибка при отправке email: ", error);
             if (error.message) {
+                setDescription(error.message)
                 setError(error.message);
             } else {
+                setDescription('Возникла ошибка при отправке Email.')
                 setError("Ошибка при отправке данных");
             }
-        } finally {
+        } 
+        finally {
             setLoading(false);
         }
     };
@@ -37,6 +52,12 @@ const Contact: React.FC = () => {
             return;
         }
         await sendEmail(email);
+    };
+
+    const handleKeyPress = (event: any) => {
+        if (event.key === 'Enter') {
+            handleSendEmail()
+        }
     };
 
     return (
@@ -60,11 +81,17 @@ const Contact: React.FC = () => {
                                         type='email'
                                         className={styles.desc_input}
                                         value={email}
+                                        onKeyDown={handleKeyPress}
                                         onChange={(e) => setEmail(e.target.value)}
                                     />
-                                    <button className={styles.desc_btn} onClick={handleSendEmail}>ОТПРАВИТЬ</button>
+                                    <button className={styles.desc_btn} onClick={handleSendEmail} disabled={loading}>
+                                        {loading ? <BeatLoader color='#FFF' style={{width: '100', height: '100', transition: '100ms'}}/> : 'ОТПРАВИТЬ'}
+                                    </button>
                                 </div>
                                 <div className={styles.bottom_block}>
+                                    <p className={styles.status}>
+                                        {description}
+                                    </p>
                                     <p className={styles.bottom_desc}>virtspaceweb@gmail.com</p>
                                 </div>
                             </div>
@@ -84,7 +111,47 @@ const sectionAnimation = {
     visible: {
         x: 0,
         opacity: 1,
+<<<<<<< Updated upstream
         transition: {delay: 0.4, type: "spring", stiffness: 75}
+=======
+        transition: {delay: 0.4, type: "spring", stiffness: 50}
+    },
+}
+
+const sectionAnimationFirst = {
+    hidden: {
+        x: -100,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 0.6, type: "spring", stiffness: 50}
+    },
+}
+
+const sectionAnimationSecond = {
+    hidden: {
+        x: -100,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 1.0, type: "spring", stiffness: 50}
+    },
+}
+
+const sectionAnimationThird = {
+    hidden: {
+        x: 100,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 1.2, type: "spring", stiffness: 50}
+>>>>>>> Stashed changes
     },
 }
 

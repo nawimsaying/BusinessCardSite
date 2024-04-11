@@ -63,6 +63,21 @@ const scrollToContact = () => {
     }
 };
 
+<<<<<<< Updated upstream
+=======
+const nameAnimation = {
+    hidden: {
+        x: -100,
+        opacity: 0,
+    },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {delay: 0.4, type: "spring", stiffness: 50}
+    },
+}
+
+>>>>>>> Stashed changes
 const titleAnimation = {
     hidden: {
         x: -100,
@@ -71,7 +86,11 @@ const titleAnimation = {
     visible: {
         x: 0,
         opacity: 1,
+<<<<<<< Updated upstream
         transition: {delay: 0.4, type: "spring", stiffness: 75}
+=======
+        transition: {delay: 0.6, type: "spring", stiffness: 50}
+>>>>>>> Stashed changes
     },
 }
 
@@ -83,7 +102,35 @@ const bottomBlockAnimation = {
     visible: {
         y: 0,
         opacity: 1,
+<<<<<<< Updated upstream
         transition: {delay: 0.4, type: "spring", stiffness: 75}
+=======
+        transition: {delay: 0.2, type: "spring", stiffness: 50}
+    },
+}
+
+const bottomBlockAnimationSecond = {
+    hidden: {
+        y: -50,
+        opacity: 0,
+    },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: {delay: 0.6, type: "spring", stiffness: 50}
+    },
+}
+
+const bottomBlockAnimationThird = {
+    hidden: {
+        y: -50,
+        opacity: 0,
+    },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: {delay: 0.8, type: "spring", stiffness: 50}
+>>>>>>> Stashed changes
     },
 }
 

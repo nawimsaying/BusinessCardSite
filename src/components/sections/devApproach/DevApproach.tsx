@@ -88,7 +88,11 @@ const sectionAnimation = {
     visible: {
         x: 0,
         opacity: 1,
+<<<<<<< Updated upstream
         transition: { delay: 0.4, type: "spring", stiffness: 75 }
+=======
+        transition: { delay: 0.4, type: "spring", stiffness: 50 }
+>>>>>>> Stashed changes
     },
 }
 
@@ -100,7 +104,11 @@ const sectionRightAnimation = {
     visible: {
         x: 0,
         opacity: 1,
+<<<<<<< Updated upstream
         transition: { delay: 0.4, type: "spring", stiffness: 75 }
+=======
+        transition: { delay: 0.4, type: "spring", stiffness: 50 }
+>>>>>>> Stashed changes
     },
 }
 
