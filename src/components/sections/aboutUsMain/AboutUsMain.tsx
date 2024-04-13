@@ -12,11 +12,11 @@ const AboutUsMain: React.FC = () => {
                     <motion.section initial='hidden' whileInView='visible' viewport={{once: true}}>
                         <motion.p variants={nameAnimation} className={styles.section_name}>/ О НАС</motion.p>
 
-                        <motion.p variants={titleAnimation} className={styles.text}>ПЕРСПЕКТИВНАЯ КОМАНДА МОЛОДЫХ
+                        <motion.p variants={titleAnimation} className={styles.text}>ПЕРСПЕКТИВНАЯ КОМАНДА ОПЫТНЫХ
                             РАЗРАБОТЧИКОВ ОБЯЗАТЕЛЬНО ПОМОЖЕТ СОЗДАТЬ <span
                                 className={styles.text_color_first}>УНИКАЛЬНЫЙ,</span> <span
                                 className={styles.text_color_second}>СОВРЕМЕННЫЙ</span> И <span
-                                className={styles.text_color_third}>БЫСТРЫЙ</span> САЙТ ДЛЯ ВАШЕГО ПРОСТРАНСТВА.
+                                className={styles.text_color_third}>БЫСТРЫЙ</span> САЙТ ПОД ЛЮБЫЕ ЦЕЛИ.
                         </motion.p>
                     </motion.section>
 

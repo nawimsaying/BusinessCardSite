@@ -58,7 +58,7 @@ const HomeMain: React.FC = () => {
                 <div className={styles.desc_container}>
                     <motion.p initial={{ opacity: 0, y: 50 }} 
                         animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }} 
-                        transition={{ duration: 0.6, type: "spring", stiffness: 20 }} 
+                        transition={{ duration: 0, type: "spring", stiffness: 25 }} 
                         viewport={{once: true}} 
                         className={styles.description}>
                             Создаем современные веб-приложения. От визитки до интернет-магазина.
@@ -77,7 +77,7 @@ const titleAnimation = {
     visible: {
         y: 0,
         opacity: 1,
-        transition: { delay: 0.6, type: "spring", stiffness: 20 }
+        transition: { delay: 0.2, type: "spring", stiffness: 15 }
     },
 }
 

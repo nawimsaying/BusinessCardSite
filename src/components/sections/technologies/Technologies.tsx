@@ -18,11 +18,11 @@ const Technologies = () => {
 
         setTimeout(() => {
             if (buttonId == 1)
-                setText('REACT, TYPESCRIPT');
+                setText('React, TypeScript');
             else if (buttonId == 2)
-                setText('.NET');
+                setText('ASP.NET Core');
             else if (buttonId == 3)
-                setText('DOCKER, GITHUB');
+                setText('Docker, GitHub');
 
             setIsChanging(false);
         }, 400);
@@ -40,8 +40,7 @@ const Technologies = () => {
                                 <motion.p variants={sectionAnimationFirst} className={styles.title}>ТЕХНОЛОГИИ</motion.p>
 
                                 <motion.p variants={sectionAnimationSecond} className={styles.description}>Для разработки мы используем только современные и
-                                    актуальные средства, чтобы Ваше приложение прослужило как можно дольше и не нуждалось в
-                                    серьезных обновлениях.</motion.p>
+                                    актуальные технологии, чтобы Ваше приложение прослужило дольше и легко обслуживалось.</motion.p>
                             </div>
 
                             <div className={styles.right_block}>
@@ -110,7 +109,7 @@ const sectionAnimationSecond = {
 
 const sectionAnimationThird = {
     hidden: {
-        x: 100,
+        x: 25,
         opacity: 0,
     },
     visible: {
@@ -122,7 +121,7 @@ const sectionAnimationThird = {
 
 const sectionAnimationFourth = {
     hidden: {
-        x: 100,
+        x: 25,
         opacity: 0,
     },
     visible: {

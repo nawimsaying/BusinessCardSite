@@ -13,23 +13,23 @@ const OurTeam: React.FC = () => {
 
                         <div className={styles.block}>
                             <motion.div variants={leftBlockAnimation} className={styles.block_photo}>
-                                <img className={styles.picture} src='public\images\testimg2.png'/>
+                                <img className={styles.picture} src='public\images\IMG_1938.png'/>
                             </motion.div>
 
                             <div className={styles.text_block}>
                                 <motion.div variants={leftBlockTextAnimation}>
-                                    <p className={styles.name}>ДАНИИЛ</p>
+                                    <p className={styles.name}>НИКИТА</p>
 
-                                    <p className={styles.speciality}>ДИЗАЙНЕР</p>
+                                    <p className={styles.speciality}>BACKEND-РАЗРАБОТЧИК</p>
                                 </motion.div>
 
                                 <motion.div variants={leftBlockSocialAnimation}>
                                     <div className={styles.social_networks}>
-                                        <a className={styles.links} href="https://vk.com/uknowimsaying" target="_blank">
+                                        <a className={styles.links} href="https://vk.com/wilbur_whateley" target="_blank">
                                             <img className={styles.link_img} src='public\images\vklogo.png'/>
                                         </a>
 
-                                        <a href="https://t.me/opopee" target="_blank">
+                                        <a href="https://t.me/T1XOH" target="_blank">
                                             <img className={styles.link_img} src='public\images\tglogo.png'/>
                                         </a>
                                     </div>
@@ -49,24 +49,24 @@ const OurTeam: React.FC = () => {
                     <motion.section initial='hidden' whileInView='visible' viewport={{once: true}}>
                         <div className={styles.block_right}>
                             <motion.div variants={rightBlockAnimation} className={styles.block_photo_right}>
-                                <img className={styles.picture} src='public\images\testimg2.png'/>
+                                <img className={styles.picture} src='public\images\IMG_1939.png'/>
                             </motion.div>
 
                             <div className={styles.text_block}>
                                 <motion.div variants={rightBlockTextAnimation}>
-                                    <p className={styles.name}>ДАНИИЛ</p>
+                                    <p className={styles.name}>МАКСИМ</p>
 
-                                    <p className={styles.speciality}>ДИЗАЙНЕР</p>
+                                    <p className={styles.speciality}>FRONTEND-РАЗРАБОТЧИК</p>
                                 </motion.div>
 
                                 <motion.div variants={rightBlockSocialAnimation}>
                                     <div className={styles.social_networks_right}>
-                                        <a className={styles.links_right} href="https://vk.com/uknowimsaying"
+                                        <a className={styles.links_right} href="https://vk.com/mnochevny"
                                         target="_blank">
                                             <img className={styles.link_img} src='public\images\vklogo.png'/>
                                         </a>
 
-                                        <a href="https://t.me/opopee" target="_blank">
+                                        <a href="https://t.me/velp1k" target="_blank">
                                             <img className={styles.link_img} src='public\images\tglogo.png'/>
                                         </a>
                                     </div>
@@ -86,14 +86,14 @@ const OurTeam: React.FC = () => {
                     <motion.section initial='hidden' whileInView='visible' viewport={{once: true}}>
                         <div className={styles.block}>
                             <motion.div variants={leftBlockAnimation} className={styles.block_photo}>
-                                <img className={styles.picture} src='public\images\testimg2.png'/>
+                                <img className={styles.picture} src='public\images\IMG_1937.png'/>
                             </motion.div>
 
                             <div className={styles.text_block}>
                                 <motion.div variants={leftBlockTextAnimation}>
                                     <p className={styles.name}>ДАНИИЛ</p>
 
-                                    <p className={styles.speciality}>ДИЗАЙНЕР</p>
+                                    <p className={styles.speciality}>ВЕБ-ДИЗАЙНЕР</p>
                                 </motion.div>
 
                                 <motion.div variants={leftBlockSocialAnimation}>
@@ -111,8 +111,7 @@ const OurTeam: React.FC = () => {
                                 <motion.div variants={leftBlockDescAnimation}>
                                     <div className={styles.description_block}>
                                         <hr color='#FFF' className={styles.hr}></hr>
-                                        <p className={styles.desc_text}>VirtSpace - молодая студия веб-разработки,
-                                            занимающаяся созданием современных сайтов - от визитки до интернет-магазина.</p>
+                                        <p className={styles.desc_text}>«Современная веб-разработка требует современных решений. Эту концепцию наша команда пытается донести до остальных.»</p>
                                     </div>
                                 </motion.div>
                             </div>
@@ -186,7 +185,7 @@ const leftBlockDescAnimation = {
 
 const rightBlockAnimation = {
     hidden: {
-        x: 100,
+        x: 25,
         opacity: 0,
     },
     visible: {

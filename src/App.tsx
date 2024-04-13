@@ -8,9 +8,9 @@ function App() {
     return (
         <>
             <Router>
-                <div className={styles.crop}>
+                {/* <div className={styles.crop}> */}
                     <AppRouter/>
-                </div>
+                {/* </div> */}
             </Router>
         </>
     );

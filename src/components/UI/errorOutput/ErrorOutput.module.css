@@ -21,15 +21,21 @@
 }
 
 .title {
-    font-size: 55px;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 500;
+    font-size: 120px;
     line-height: 50px;
     font-weight: 500;
     margin: auto;
     margin-top: 15px;
 }
 
-.gif {
-    scale: 1;
-    width: 30%;
-    height: 30%;
+.desc {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+    margin: auto;
+    margin-top: 40px;
 }

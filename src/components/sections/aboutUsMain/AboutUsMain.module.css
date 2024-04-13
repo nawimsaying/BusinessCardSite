@@ -1,7 +1,9 @@
 .flex {
     width: 100%;
-    height: 1267px;
+    padding-top: 100px;
+    height: 1200px;
     display: flex;
+    background-color: #FFF;
 }
 
 .container {
@@ -93,7 +95,7 @@
 @media(max-width: 1700px) {
     .flex {
         width: 100%;
-        height: 1100px;
+        height: auto;
         display: flex;
     }
 
@@ -117,7 +119,7 @@
 @media(max-width: 1254px) {
     .flex {
         width: 100%;
-        height: 800px;
+        height: auto;
         display: flex;
     }
 
@@ -154,8 +156,10 @@
 
 @media(max-width: 879px) {
     .flex {
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 60px;
+        padding-bottom: 0;
         height: auto;
         width: 100%;
         display: flex;
@@ -178,8 +182,10 @@
 
 @media(max-width: 648px) {
     .flex {
-        margin-top: 60px;
-        margin-bottom: 60px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 60px;
+        padding-bottom: 0;
         height: auto;
         width: 100%;
         display: flex;

@@ -8,8 +8,6 @@ const DevApproach = () => {
     return (
         <>
             <div className={styles.flex}>
-                <div className={styles.background_gradient}></div>
-
                 <div className={styles.container}>
                     <div className={styles.items_box}>
                         <motion.section variants={sectionAnimation} initial='hidden' whileInView='visible' viewport={{ once: true }}>
@@ -75,7 +73,7 @@ const DevApproach = () => {
                 </div>
             </div>
 
-            <div className={styles.circle}></div>
+            {/* <div className={styles.circle}></div> */}
         </>
     )
 }
@@ -94,7 +92,7 @@ const sectionAnimation = {
 
 const sectionRightAnimation = {
     hidden: {
-        x: 100,
+        x: 25,
         opacity: 0,
     },
     visible: {

@@ -1,8 +1,10 @@
-import React, {useState} from 'react';
-import {motion} from 'framer-motion';
-import {UserFeedbackRepository} from "../../../architecture/feedBackUser/UserFeedbackRepository.ts";
-import {UserFeedBackApiClient} from "../../../architecture/feedBackUser/UserFeedBackApiClient.ts";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { UserFeedbackRepository } from "../../../architecture/feedBackUser/UserFeedbackRepository.ts";
+import { UserFeedBackApiClient } from "../../../architecture/feedBackUser/UserFeedBackApiClient.ts";
 import styles from './Contact.module.css';
+import { BeatLoader } from 'react-spinners';
+import * as EmailValidator from 'email-validator';
 
 const Contact: React.FC = () => {
     // @ts-ignore
@@ -14,29 +16,42 @@ const Contact: React.FC = () => {
     const sendEmail = async (email: string) => {
         try {
             setLoading(true);
-            setError(null);
-            const repository = new UserFeedbackRepository(new UserFeedBackApiClient());
-            await repository.sendEmail(email);
-            console.log("Email успешно отправлен");
-        } catch (error: any) {
-            console.error("Ошибка при отправке email:", error);
-            if (error.message) {
-                setError(error.message);
-            } else {
-                setError("Ошибка при отправке данных");
+            if (EmailValidator.validate(email)) {
+                const repository = new UserFeedbackRepository(new UserFeedBackApiClient());
+                await repository.sendEmail(email);
+                // await new Promise(resolve => setTimeout(resolve, 2000));
+                setError('Email успешно отправлен!')
             }
-        } finally {
+            else {
+                setError('Почта введена некорректно.')
+            }
+        } 
+        catch (error: any) {
+            console.error("Ошибка при отправке email: ", error);
+            if (error.message) {
+                setError('Письмо на эту почту уже отправлено.')
+            } else {
+                setError('Возникла ошибка при отправке Email.')
+            }
+        } 
+        finally {
             setLoading(false);
         }
     };
 
     const handleSendEmail = async () => {
         if (email.trim() === "") {
-            setError("Поле не заполнено");
-            console.error("Поле не заполнено");
+            setError("Поле пустое. Введите адрес эл. почты.");
+            console.error("Поле пустое. Введите адрес эл. почты.");
             return;
         }
         await sendEmail(email);
+    };
+
+    const handleKeyPress = (event: any) => {
+        if (event.key === 'Enter') {
+            handleSendEmail()
+        }
     };
 
     return (
@@ -49,7 +64,7 @@ const Contact: React.FC = () => {
                         <div className={styles.container_flex}>
                             <div className={styles.text_block}>
                                 <motion.p variants={sectionAnimationFirst} className={styles.title}>СВЯЗАТЬСЯ<br/>С НАМИ</motion.p>
-                                <motion.p variants={sectionAnimationSecond} className={styles.description}>Оставьте свой адрес электронной почты и мы Вам напишем!</motion.p>
+                                <motion.p variants={sectionAnimationSecond} className={styles.description}>Просто оставьте свой e-mail и мы сами Вам напишем. Или напишите нам на корпоративный адрес эл. почты.</motion.p>
                             </div>
 
                             <motion.div variants={sectionAnimationThird} className={styles.right_block}>
@@ -59,11 +74,15 @@ const Contact: React.FC = () => {
                                         type='email'
                                         className={styles.desc_input}
                                         value={email}
+                                        onKeyDown={handleKeyPress}
                                         onChange={(e) => setEmail(e.target.value)}
                                     />
-                                    <button className={styles.desc_btn} onClick={handleSendEmail}>ОТПРАВИТЬ</button>
+                                    <button className={styles.desc_btn} onClick={handleSendEmail} disabled={loading}>
+                                        {loading ? <BeatLoader color='#FFF' style={{width: '100', height: '100', transition: '100ms'}}/> : 'ОТПРАВИТЬ'}
+                                    </button>
                                 </div>
                                 <div className={styles.bottom_block}>
+                                    <p className={styles.bottom_message}>{error}</p>
                                     <p className={styles.bottom_desc}>virtspaceweb@gmail.com</p>
                                 </div>
                             </motion.div>
@@ -113,7 +132,7 @@ const sectionAnimationSecond = {
 
 const sectionAnimationThird = {
     hidden: {
-        x: 100,
+        x: 25,
         opacity: 0,
     },
     visible: {
