@@ -38,8 +38,7 @@ const OurTeam: React.FC = () => {
                                 <motion.div variants={leftBlockDescAnimation}>
                                     <div className={styles.description_block}>
                                         <hr color='#FFF' className={styles.hr}></hr>
-                                        <p className={styles.desc_text}>VirtSpace - молодая студия веб-разработки,
-                                            занимающаяся созданием современных сайтов - от визитки до интернет-магазина.</p>
+                                        <p className={styles.desc_text}>«В создании веб-сайтов важно не только понимать технологии, но и видеть их применение в решении реальных проблем пользователей.»</p>
                                     </div>
                                 </motion.div>
                             </div>
@@ -74,8 +73,7 @@ const OurTeam: React.FC = () => {
 
                                 <motion.div variants={rightBlockDescAnimation}>
                                     <div className={styles.description_block}>
-                                        <p className={styles.desc_text_right}>VirtSpace - молодая студия веб-разработки,
-                                            занимающаяся созданием современных сайтов - от визитки до интернет-магазина.</p>
+                                        <p className={styles.desc_text_right}>«Мы способны не только понимать технологии, но и видеть, как они могут изменить жизнь пользователей.»</p>
                                         <hr color='#FFF' className={styles.hr}></hr>
                                     </div>
                                 </motion.div>
