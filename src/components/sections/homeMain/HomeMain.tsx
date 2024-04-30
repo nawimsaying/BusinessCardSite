@@ -64,7 +64,7 @@ const HomeMain: React.FC = () => {
                         transition={{ duration: 0, type: "spring", stiffness: 25 }} 
                         viewport={{once: true}} 
                         className={styles.description}>
-                            CCCСоздаем современные веб-приложения. От визитки до интернет-магазина.
+                            Создаем современные веб-приложения. От визитки до интернет-магазина.
                     </motion.p>
                 </div>
             </div>
