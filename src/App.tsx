@@ -9,9 +9,7 @@ function App() {
     return (
         <>
             <Router>
-                {/* <div className={styles.crop}> */}
                     <AppRouter/>
-                {/* </div> */}
             </Router>
         </>
     );
