@@ -23,7 +23,7 @@ const AboutUsMain: React.FC = () => {
                     <motion.section initial='hidden' whileInView='visible' viewport={{once: true}}>
                         <div className={styles.bottom_flex}>
                             <motion.div variants={bottomBlockAnimationFirst}>
-                                <img className={styles.arw} src='public\svg\arw.svg'></img>
+                                <img className={styles.arw} src='/public/svg/arw.svg'></img>
                             </motion.div>
 
                             <div className={styles.block_first}>
