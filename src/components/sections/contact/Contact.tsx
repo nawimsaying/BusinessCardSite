@@ -20,7 +20,7 @@ const Contact: React.FC = () => {
                 const repository = new UserFeedbackRepository(new UserFeedBackApiClient());
                 await repository.sendEmail(email);
                 // await new Promise(resolve => setTimeout(resolve, 2000));
-                setError('Email успешно отправлен!')
+                setError('Email успешно отправлен!!')
             }
             else {
                 setError('Почта введена некорректно.')
