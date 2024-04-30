@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import '/src/index.css'
 import styles from './HomeMain.module.css';
+// @ts-ignore
 import ParticleImage, {ParticleOptions, Vector, forces, ParticleForce} from "react-particle-image";
 import { motion } from 'framer-motion'
 
 const HomeMain: React.FC = () => {
+    // @ts-ignore
     const particleOptions: ParticleOptions = {
         filter: ({x, y, image}) => {
             // Get pixel
@@ -21,6 +23,7 @@ const HomeMain: React.FC = () => {
         }
     };
 
+    // @ts-ignore
     const motionForce = (x: number, y: number): ParticleForce => {
         return forces.disturbance(x, y, 45);
     };
