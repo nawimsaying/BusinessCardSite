@@ -13,7 +13,7 @@ const OurTeam: React.FC = () => {
 
                         <div className={styles.block}>
                             <motion.div variants={leftBlockAnimation} className={styles.block_photo}>
-                                <img className={styles.picture} src='public\images\IMG_1938.png'/>
+                                <img className={styles.picture} src='.images/IMG_1938.png'/>
                             </motion.div>
 
                             <div className={styles.text_block}>
@@ -26,11 +26,11 @@ const OurTeam: React.FC = () => {
                                 <motion.div variants={leftBlockSocialAnimation}>
                                     <div className={styles.social_networks}>
                                         <a className={styles.links} href="https://vk.com/wilbur_whateley" target="_blank">
-                                            <img className={styles.link_img} src='public\images\vklogo.png'/>
+                                            <img className={styles.link_img} src='.images/vklogo.png'/>
                                         </a>
 
                                         <a href="https://t.me/T1XOH" target="_blank">
-                                            <img className={styles.link_img} src='public\images\tglogo.png'/>
+                                            <img className={styles.link_img} src='.images/tglogo.png'/>
                                         </a>
                                     </div>
                                 </motion.div>
@@ -48,7 +48,7 @@ const OurTeam: React.FC = () => {
                     <motion.section initial='hidden' whileInView='visible' viewport={{once: true}}>
                         <div className={styles.block_right}>
                             <motion.div variants={rightBlockAnimation} className={styles.block_photo_right}>
-                                <img className={styles.picture} src='public\images\IMG_1939.png'/>
+                                <img className={styles.picture} src='.images/IMG_1939.png'/>
                             </motion.div>
 
                             <div className={styles.text_block}>
@@ -62,11 +62,11 @@ const OurTeam: React.FC = () => {
                                     <div className={styles.social_networks_right}>
                                         <a className={styles.links_right} href="https://vk.com/mnochevny"
                                         target="_blank">
-                                            <img className={styles.link_img} src='public\images\vklogo.png'/>
+                                            <img className={styles.link_img} src='.images/vklogo.png'/>
                                         </a>
 
                                         <a href="https://t.me/velp1k" target="_blank">
-                                            <img className={styles.link_img} src='public\images\tglogo.png'/>
+                                            <img className={styles.link_img} src='.images/tglogo.png'/>
                                         </a>
                                     </div>
                                 </motion.div>
@@ -84,7 +84,7 @@ const OurTeam: React.FC = () => {
                     <motion.section initial='hidden' whileInView='visible' viewport={{once: true}}>
                         <div className={styles.block}>
                             <motion.div variants={leftBlockAnimation} className={styles.block_photo}>
-                                <img className={styles.picture} src='public\images\IMG_1937.png'/>
+                                <img className={styles.picture} src='.images/IMG_1937.png'/>
                             </motion.div>
 
                             <div className={styles.text_block}>
@@ -97,11 +97,11 @@ const OurTeam: React.FC = () => {
                                 <motion.div variants={leftBlockSocialAnimation}>
                                     <div className={styles.social_networks}>
                                         <a className={styles.links} href="https://vk.com/uknowimsaying" target="_blank">
-                                            <img className={styles.link_img} src='public\images\vklogo.png'/>
+                                            <img className={styles.link_img} src='.images/vklogo.png'/>
                                         </a>
 
                                         <a href="https://t.me/opopee" target="_blank">
-                                            <img className={styles.link_img} src='public\images\tglogo.png'/>
+                                            <img className={styles.link_img} src='.images/tglogo.png'/>
                                         </a>
                                     </div>
                                 </motion.div>
