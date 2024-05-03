@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { UserFeedbackRepository } from "../../../architecture/feedBackUser/UserFeedbackRepository.ts";
-import { UserFeedBackApiClient } from "../../../architecture/feedBackUser/UserFeedBackApiClient.ts";
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
+import {UserFeedbackRepository} from "../../../architecture/feedBackUser/UserFeedbackRepository.ts";
+import {UserFeedBackApiClient} from "../../../architecture/feedBackUser/UserFeedBackApiClient.ts";
 import styles from './Contact.module.css';
-import { BeatLoader } from 'react-spinners';
+import {BeatLoader} from 'react-spinners';
 import * as EmailValidator from 'email-validator';
-import NotificationEmail from "../../UI/notificationEmail/NotificationEmail.tsx";
 
 const Contact: React.FC = () => {
 
@@ -13,7 +12,9 @@ const Contact: React.FC = () => {
     // @ts-ignore
     const [error, setError] = useState<string | null>(null);
     const [email, setEmail] = useState("");
+    let [emailValidateSuccessfully, setEmailValidateSuccessfully] = useState(false);
     let [emailSentSuccessfully, setEmailSentSuccessfully] = useState(false);
+    let [emailSentError, setEmailSentError] = useState(false);
 
 
     const sendEmail = async (email: string) => {
@@ -24,22 +25,21 @@ const Contact: React.FC = () => {
                 let responseEmail = await repository.sendEmail(email);
                 setError(responseEmail.messageForUser)
 
-                if(responseEmail.emailSent){
-                    emailSentSuccessfully = true;
-                }
-
-            }
-            else {
+                setEmailValidateSuccessfully(false);
+                setEmailSentSuccessfully(responseEmail.emailSent);
+                setEmailSentError(!responseEmail.emailSent);
+            } else {
+                setEmailValidateSuccessfully(true)
                 setError('Почта введена некорректно.')
             }
-        }
-        finally {
+        } finally {
             setLoading(false);
         }
     };
 
     const handleSendEmail = async () => {
         if (email.trim() === "") {
+            setEmailValidateSuccessfully(true);
             setError("Поле пустое. Введите адрес эл. почты.");
             console.error("Поле пустое. Введите адрес эл. почты.");
             return;
@@ -62,32 +62,26 @@ const Contact: React.FC = () => {
 
                         <div className={styles.container_flex}>
                             <div className={styles.text_block}>
-                                <motion.p variants={sectionAnimationFirst} className={styles.title}>СВЯЗАТЬСЯ<br/>С НАМИ</motion.p>
-                                <motion.p variants={sectionAnimationSecond} className={styles.description}>Просто оставьте свой e-mail и мы сами Вам напишем. Или напишите нам на корпоративный адрес эл. почты.</motion.p>
+                                <motion.p variants={sectionAnimationFirst} className={styles.title}>СВЯЗАТЬСЯ<br/>С НАМИ
+                                </motion.p>
+                                <motion.p variants={sectionAnimationSecond} className={styles.description}>Просто
+                                    оставьте свой e-mail и мы сами Вам напишем. Или напишите нам на корпоративный адрес
+                                    эл. почты.
+                                </motion.p>
                             </div>
 
                             <motion.div variants={sectionAnimationThird} className={styles.right_block}>
-                                <div className={styles.desc_block}>
-                                    <input
-                                        placeholder='EMAIL АДРЕС'
-                                        type='email'
-                                        className={styles.desc_input}
-                                        value={email}
-                                        onKeyDown={handleKeyPress}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                    />
 
-                                    {emailSentSuccessfully ?
-                                        <button className={styles.desc_btn} onClick={handleSendEmail}
-                                                disabled={true}>
-                                            { <img src='./svg/check_icon.svg'  color='#FFF' style={{
-                                                width: '100',
-                                                height: '100',
-
-                                            }}
-                                            />}
-                                        </button>
-                                        :
+                                {emailSentError || emailValidateSuccessfully ?
+                                    <div className={styles.desc_block_for_error}>
+                                        <input
+                                            placeholder='EMAIL АДРЕС'
+                                            type='email'
+                                            className={styles.desc_input_for_error}
+                                            value={email}
+                                            onKeyDown={handleKeyPress}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                        />
 
                                         <button className={styles.desc_btn} onClick={handleSendEmail}
                                                 disabled={loading}>
@@ -98,12 +92,48 @@ const Contact: React.FC = () => {
                                             }}/> : 'ОТПРАВИТЬ'}
                                         </button>
 
-                                    }
+                                    </div>
+                                    :
+                                    <div className={styles.desc_block}>
+                                        <input
+                                            placeholder='EMAIL АДРЕС'
+                                            type='email'
+                                            className={styles.desc_input}
+                                            value={email}
+                                            onKeyDown={handleKeyPress}
+                                            onChange={(e) => setEmail(e.target.value)}
+                                        />
 
 
-                                </div>
+                                        {emailSentSuccessfully ?
+                                            <button className={styles.check_btn} onClick={handleSendEmail}
+                                                    disabled={true}>
+                                                {<img src='./svg/check_icon.svg' alt='iconCheck' color='#FFF' style={{
+                                                    width: '50',
+                                                    height: '50',
+                                                }}
+                                                />}
+                                            </button>
+                                            :
+                                            <button className={styles.desc_btn} onClick={handleSendEmail}
+                                                    disabled={loading}>
+                                                {loading ? <BeatLoader color='#FFF' style={{
+                                                    width: '100',
+                                                    height: '100',
+                                                    transition: '100ms'
+                                                }}/> : 'ОТПРАВИТЬ'}
+                                            </button>
+                                        }
+
+
+                                    </div>
+                                }
+
                                 <div className={styles.bottom_block}>
-                                    <p className={styles.bottom_message}>{error}</p>
+                                    { emailSentError || emailValidateSuccessfully ?
+                                        <p className={styles.bottom_message_for_error}>{error}</p> :
+                                        <p className={styles.bottom_message}>{error}</p>
+                                    }
                                     <p className={styles.bottom_desc}>virtspaceweb@gmail.com</p>
                                 </div>
                             </motion.div>
