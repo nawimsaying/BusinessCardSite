@@ -15,6 +15,7 @@ export class UserReviewsRepository {
         if (result.isSuccess()) {
             return result.getData()!;
         } else {
+            // @ts-ignore
             throw new Error(result.getException());
         }
     }

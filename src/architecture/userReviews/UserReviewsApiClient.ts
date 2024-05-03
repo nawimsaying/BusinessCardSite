@@ -33,6 +33,7 @@ export class UserReviewsApiClient implements IUserReviewsSource {
             });
             return Result.success(userReviews);
         } catch (error: any) {
+            // @ts-ignore
             return Result.error<UserReviews[]>('Error not fount data');
         }
     }
