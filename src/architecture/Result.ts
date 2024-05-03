@@ -1,8 +1,8 @@
 export class Result<T> {
     private data?: T;
-    private exception?: string;
+    private exception?: T;
 
-    constructor(data?: T, exception?: string) {
+    constructor(data?: T, exception?: T) {
         this.data = data;
         this.exception = exception;
     }
@@ -11,7 +11,7 @@ export class Result<T> {
         return this.data !== undefined;
     }
 
-    static error<T>(exception: string): Result<T> {
+    static error<T>(exception: T): Result<T> {
         return new Result<T>(undefined, exception);
     }
 
@@ -23,7 +23,7 @@ export class Result<T> {
         return this.data;
     }
 
-    getException(): string | undefined {
+    getException(): T | undefined {
         return this.exception;
     }
 }

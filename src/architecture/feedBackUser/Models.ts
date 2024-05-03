@@ -1,11 +1,13 @@
 export class UserFeedback {
 
-    statusResponse: number
+    messageForUser: string
+    emailSent: boolean
 
 
-    constructor(statusResponse: number) {
+    constructor(messageForUser: string, emailSent: boolean) {
 
-        this.statusResponse = statusResponse
+        this.messageForUser = messageForUser
+        this.emailSent = emailSent
 
     }
 }

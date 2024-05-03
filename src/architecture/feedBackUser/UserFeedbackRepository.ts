@@ -15,10 +15,8 @@ export class UserFeedbackRepository {
         if (result.isSuccess()) {
             return result.getData()!;
         } else {
-            throw new Error(result.getException() as string);
+            return result.getException()!;
         }
     }
 
-
-    // Остальные методы
 }

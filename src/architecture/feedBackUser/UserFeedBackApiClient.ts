@@ -9,18 +9,19 @@ export class UserFeedBackApiClient implements IUserFeedbackSource {
 
 
     async sendEmail(email: string): Promise<Result<UserFeedback>> {
+
+
         try {
             const response: AxiosResponse<any> = await this.client.post(`https://virtspace.dev/server/api/Feedbacks/sendmail`, {
                 email: email,
             });
 
-            return Result.success(response.data);
+            const ResponseForUser = new UserFeedback(response.data, true);
+            return Result.success(ResponseForUser);
         } catch (error: any) {
-            const statusResponse = error.response?.status;
-            return Result.error(`Status code ${statusResponse}`);
+            const errorFeedback = new UserFeedback('Возникла ошибка при отправке Email.', false);
+            return Result.error(errorFeedback);
         }
     }
 
-
-    // Implement other methods
 }

@@ -5,35 +5,34 @@ import { UserFeedBackApiClient } from "../../../architecture/feedBackUser/UserFe
 import styles from './Contact.module.css';
 import { BeatLoader } from 'react-spinners';
 import * as EmailValidator from 'email-validator';
+import NotificationEmail from "../../UI/notificationEmail/NotificationEmail.tsx";
 
 const Contact: React.FC = () => {
-    // @ts-ignore
+
     const [loading, setLoading] = useState(false);
     // @ts-ignore
     const [error, setError] = useState<string | null>(null);
     const [email, setEmail] = useState("");
+    let [emailSentSuccessfully, setEmailSentSuccessfully] = useState(false);
+
 
     const sendEmail = async (email: string) => {
         try {
             setLoading(true);
             if (EmailValidator.validate(email)) {
                 const repository = new UserFeedbackRepository(new UserFeedBackApiClient());
-                await repository.sendEmail(email);
-                // await new Promise(resolve => setTimeout(resolve, 2000));
-                setError('Email успешно отправлен!')
+                let responseEmail = await repository.sendEmail(email);
+                setError(responseEmail.messageForUser)
+
+                if(responseEmail.emailSent){
+                    emailSentSuccessfully = true;
+                }
+
             }
             else {
                 setError('Почта введена некорректно.')
             }
-        } 
-        catch (error: any) {
-            console.error("Ошибка при отправке email: ", error);
-            if (error.message) {
-                setError('Письмо на эту почту уже отправлено.')
-            } else {
-                setError('Возникла ошибка при отправке Email.')
-            }
-        } 
+        }
         finally {
             setLoading(false);
         }
@@ -77,9 +76,31 @@ const Contact: React.FC = () => {
                                         onKeyDown={handleKeyPress}
                                         onChange={(e) => setEmail(e.target.value)}
                                     />
-                                    <button className={styles.desc_btn} onClick={handleSendEmail} disabled={loading}>
-                                        {loading ? <BeatLoader color='#FFF' style={{width: '100', height: '100', transition: '100ms'}}/> : 'ОТПРАВИТЬ'}
-                                    </button>
+
+                                    {emailSentSuccessfully ?
+                                        <button className={styles.desc_btn} onClick={handleSendEmail}
+                                                disabled={true}>
+                                            { <img src='./svg/check_icon.svg'  color='#FFF' style={{
+                                                width: '100',
+                                                height: '100',
+
+                                            }}
+                                            />}
+                                        </button>
+                                        :
+
+                                        <button className={styles.desc_btn} onClick={handleSendEmail}
+                                                disabled={loading}>
+                                            {loading ? <BeatLoader color='#FFF' style={{
+                                                width: '100',
+                                                height: '100',
+                                                transition: '100ms'
+                                            }}/> : 'ОТПРАВИТЬ'}
+                                        </button>
+
+                                    }
+
+
                                 </div>
                                 <div className={styles.bottom_block}>
                                     <p className={styles.bottom_message}>{error}</p>
@@ -90,6 +111,7 @@ const Contact: React.FC = () => {
                     </motion.section>
                 </div>
             </div>
+
         </div>
     )
 }
