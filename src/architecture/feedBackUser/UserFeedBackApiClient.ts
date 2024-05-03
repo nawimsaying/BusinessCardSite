@@ -16,8 +16,23 @@ export class UserFeedBackApiClient implements IUserFeedbackSource {
                 email: email,
             });
 
-            const ResponseForUser = new UserFeedback(response.data, true);
-            return Result.success(ResponseForUser);
+            const { message, success }: { message: string, success: boolean } = response.data;
+
+
+            const messageForUser: string = message;
+            const emailSent: boolean = success;
+
+            const responseBody: UserFeedback = {
+                messageForUser,
+                emailSent
+            };
+
+            return Result.success(responseBody);
+
+
+
+     /*       const ResponseForUser = new UserFeedback(response.data, true);
+            return Result.success(ResponseForUser);*/
         } catch (error: any) {
             const errorFeedback = new UserFeedback('Возникла ошибка при отправке Email.', false);
             return Result.error(errorFeedback);
