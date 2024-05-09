@@ -1,48 +1,50 @@
-// @ts-ignore
 import React from 'react';
-import {NavLink, Link, useLocation} from 'react-router-dom';
-import classes from "./NavBar.module.css";
+import { NavLink, useLocation } from 'react-router-dom';
+import styles from "./NavBar.module.css";
 
-const Header = () => {
+const NavBar = () => {
     const location = useLocation();
 
-    const navLinkStyle = (path: string) => ({
-        color: location.pathname === path ? 'rgba(229, 75, 255, 1)' : 'inherit',
-    });
+    const navBlackAndWhiteBg = (path: string) => {
+        let backgroundColor = '';
+        let color = '';
+
+        if (location.pathname === '/') {
+            backgroundColor = path === '/' ? '#FFF' : '#000';
+            color = path === '/' ? '#000' : '#FFF';
+        } else if (location.pathname === '/portfolio') {
+            backgroundColor = path === '/portfolio' ? '#000' : '#FFF';
+            color = path === '/portfolio' ? '#FFF' : '#000';
+        } else if (location.pathname === '/contact') {
+            backgroundColor = path === '/contact' ? '#FFF' : '#000';
+            color = path === '/contact' ? '#000' : '#FFF';
+        }
+
+        return {
+            backgroundColor,
+            color
+        };
+    };
 
     return (
-        <div className={classes.headerNav}>
-            <div className={classes.container}>
-                <div className={classes.container_flex}>
-                    <div className={classes.block_logo}>
-                        <div className={classes.logo}>
-
-                        </div>
-                    </div>
-
-                    <ul className={classes.block_links}>
-                        <NavLink to="/" className={classes.navLink} style={navLinkStyle('/')}>
+        <div className={styles.headerNav}>
+            <div className={styles.container}>
+                <div className={styles.container_flex}>
+                    <ul className={styles.block_links}>
+                        <NavLink to="/" className={styles.navLink} style={navBlackAndWhiteBg('/')}>
                             Главная
                         </NavLink>
-                        <NavLink to="/portfolio" className={classes.navLink} style={navLinkStyle('/portfolio')}>
-                            Работы
+                        <NavLink to="/portfolio" className={styles.navLink} style={navBlackAndWhiteBg('/portfolio')}>
+                            Портфолио
                         </NavLink>
-                        <NavLink to="/aboutUs" className={classes.navLink} style={navLinkStyle('/aboutUs')}>
-                            О нас
+                        <NavLink to="/contact" className={styles.navLink} style={navBlackAndWhiteBg('/contact')}>
+                            Связаться
                         </NavLink>
                     </ul>
-
-                    <div className={classes.block_button}>
-                        <Link to="/contactPage" className={classes.buttonLink}>
-                            <button className={classes.button}>
-                                Заказать
-                            </button>
-                        </Link>
-                    </div>
                 </div>
             </div>
         </div>
     );
 };
 
-export default Header;
+export default NavBar;

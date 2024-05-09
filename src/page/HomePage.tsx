@@ -12,6 +12,7 @@ import DevApproach from '../components/sections/devApproach/DevApproach';
 import OurTeam from '../components/sections/ourTeam/OurTeam';
 import Technologies from '../components/sections/technologies/Technologies';
 import Contact from '../components/sections/contact/Contact';
+import NavBar from "../components/UI/navbar/NavBar.tsx";
 
 const HomePage: React.FC = () => {
     // @ts-ignore
@@ -30,12 +31,13 @@ const HomePage: React.FC = () => {
 
     return (
         <>
+
             <motion.div key="content"
                         initial={{opacity: 0}}
                         animate={{opacity: 1, transition: {delay: 0.25, duration: 0.25}}}
                         exit={{opacity: 0}}>
 
-                {/* <Header/> */}
+                <NavBar/>
                 <HomeMain/>
                 <AboutUsMain/>
                 <DevApproach/>

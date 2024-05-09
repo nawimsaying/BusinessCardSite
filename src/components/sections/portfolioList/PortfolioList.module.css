@@ -1,0 +1,326 @@
+
+.flex {
+    width: 100%;
+    display: flex;
+    background-color: #ffffff;
+    z-index: -3;
+}
+
+.container {
+    margin: auto;
+    max-width: 1682px;
+}
+
+.container_flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.text_block {
+    width: 100%;
+    z-index: 10;
+}
+
+.title_one,
+.title_two {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 135px;
+    color: #000;
+    line-height: 140px;
+    margin-bottom: 55px;
+}
+
+.title_one {
+    text-align: left;
+    margin-top: 270px;
+}
+
+.title_two {
+    text-align: right;
+    margin-top: -190px;
+}
+
+.description_flex {
+    display: flex;
+}
+
+.arw {
+    width: 114px;
+    height: 114px;
+}
+
+.description {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    width: 547px;
+    font-size: 18px;
+    color: #000;
+    line-height: 25px;
+    height: auto;
+}
+
+.circle {
+    position: absolute;
+    z-index: 1;
+    top: 900px;
+    left: 1200px;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 50vw;
+    max-width: 1900px;
+    max-height: 1900px;
+    opacity: 0.34;
+    background: radial-gradient(#02FF76, #2FF5CB);
+    filter: blur(10vw);
+    border-radius: 50%;
+}
+
+.portfolio_container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 120px;
+    z-index: 3;
+    margin: 2vw;
+}
+
+.portfolio_item_one,
+.portfolio_item_two,
+.portfolio_item_three {
+    flex: 1;
+
+}
+
+.portfolio_item_one {
+    margin-top: 300px;
+    margin-right: 2vw;
+}
+
+.portfolio_item_two {
+    margin-top: 200px;
+    margin-right: 2vw;
+}
+
+.portfolio_item_three {
+    margin-top: 100px;
+
+}
+
+@media(max-width: 1690px) {
+    .container {
+        max-width: 80%;
+    }
+
+    .title_one,
+    .title_two {
+        font-size: 8vw;
+        line-height: 7vw;
+    }
+
+    .title_one {
+        margin-top: 10vw;
+    }
+
+    .title_two{
+        margin-top: -11vw;
+    }
+
+    .text_block {
+        width: 100%;
+        height: 100%;
+        margin-right: 10px;
+        margin-top: 10vw;
+    }
+    .description_flex{
+        margin-left: -3vw;
+    }
+    .circle {
+        top: 700px;
+        left: 900px;
+
+        width: 40vw;
+        height: 40vw;
+        filter: blur(7vw);
+    }
+
+    .review_content {
+        margin-top: 20px;
+    }
+
+    .container_flex {
+        display: flex;
+        height: auto;
+        flex-wrap: wrap;
+
+    }
+    .portfolio_container {
+        flex-wrap: wrap;
+        margin-top: -10px;
+        justify-content: center;
+        margin-left: -50px;
+    }
+
+    .portfolio_item_one,
+    .portfolio_item_two {
+        flex: 0 0 auto;
+    }
+
+    .portfolio_item_three {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10px;
+    }
+     .portfolio_item_three > div:first-child{
+    margin-right: 50px;
+     }
+     .portfolio_item_three > div:last-child{
+         margin-top: -200px;
+         margin-right: 50px;
+     }
+
+}
+
+@media(max-width: 1180px) {
+
+    .title_one,
+    .title_two {
+        font-size: 8vw;
+        line-height: 7vw;
+        margin-top: 0;
+        margin-bottom: 0;
+
+
+    }
+    .title_one{
+        margin-left: -8vw;
+
+    }
+    .title_two{
+        margin-top: -7vw;
+        margin-right: -8vw;
+    }
+    .description_flex{
+        margin-top: 5vw;
+        margin-left: auto;
+        justify-content: center;
+
+    }
+    .description{
+        font-size: 2vw;
+        line-height: 2.5vw;
+    }
+    .arw{
+        height: 9vw;
+        width: 9vw;
+    }
+
+    .circle{
+        top: 450px;
+        left: 650px;
+
+        width: 40vw;
+        height: 40vw;
+    }
+    .portfolio_container {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4vw;
+        margin-top: 6vw;
+        z-index: 1;
+        margin-left: 0;
+        margin-right: 0;
+
+    }
+
+    .portfolio_item_one,
+    .portfolio_item_two   {
+        margin-top: 0;
+        flex: 0 0 auto;
+        margin-bottom: 3vw;
+    }
+    .portfolio_item_three{
+        display: block;
+        margin-bottom: 3vw;
+    }
+    .portfolio_item_three > div:last-child{
+        margin-top: 0px;
+
+    }
+}
+
+@media(max-width: 850px) {
+    .circle{
+        top: 300px;
+        left: 450px;
+
+        width: 35vw;
+        height: 35vw;
+    }
+}
+
+@media(max-width: 580px) {
+    .title_one,
+    .title_two {
+        font-size: 8vw;
+        line-height: 7vw;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .title_two{
+        margin-top: -6.5vw;
+    }
+    .description_flex{
+    justify-content: center;
+        margin-top: 3vw;
+    }
+    .description {
+        font-size: 2.5vw;
+        line-height: 3vw;
+    }
+    .arw{
+        height: 13vw;
+        width: 13vw;
+    }
+
+    .circle{
+        top: 200px;
+        left: 300px;
+
+        width: 35vw;
+        height: 35vw;
+    }
+    .portfolio_item_one,
+    .portfolio_item_two,
+    .portfolio_item_three {
+        margin-right: 0;
+    }
+    .portfolio_item_three {
+        margin-right: 0; /* Убираем отступ */
+    }
+    .portfolio_item_three > div:first-child{
+        margin-right: 0;
+    }
+    .portfolio_item_three > div:last-child{
+
+        margin-right: 0;
+    }
+}
+
+@media(max-width: 370px) {
+    .circle{
+        top: 100px;
+        left: 200px;
+
+        width: 25vw;
+        height: 25vw;
+    }
+
+}
+@media(max-width: 300px) {
+    .circle{
+        top: 70px;
+        left: 150px;
+
+    }
+}
