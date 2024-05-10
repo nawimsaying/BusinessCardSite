@@ -8,13 +8,9 @@ import {UserReviews} from "../../../architecture/userReviews/Models.ts";
 
 const PortfolioList: React.FC = () => {
     const portfolioData: UserReviews[] = [
-        { id: 1, customerImage: './images/customerImage.png', siteImage: './images/siteImage.png', customerName: 'Test', description: 'Детальная проработка технического задания - первый и очень важный этап для упешной разработки любого продукта.' },
-        { id: 2, customerImage: './images/customerImage.png', siteImage: './images/siteImage.png', customerName: 'Test 2', description: 'description 2description description' },
-        { id: 3, customerImage: './images/customerImage.png', siteImage: './images/siteImage.png', customerName: 'Test 3', description: 'description 3 description description' },
-        { id: 4, customerImage: './images/customerImage.png', siteImage: './images/siteImage.png', customerName: 'Test 4', description: 'description 444 description description' },
-        { id: 5, customerImage: './images/customerImage.png', siteImage: './images/siteImage.png', customerName: 'Test 5', description: 'description  555description description' },
-        { id: 6, customerImage: './images/customerImage.png', siteImage: './images/siteImage.png', customerName: 'Test 6', description: 'description 6 description description' },
-
+        { id: 0, customerImage: './images/customerImage.png', siteImage: './images/siteImage.png', customerName: 'Ваня', description: 'Детальная проработка технического задания - первый и очень важный этап.' },
+        { id: 1, customerImage: '', siteImage: './images/siteImage.png', customerName: '', description: '' },
+        { id: 2, customerImage: '', siteImage: './images/siteImage.png', customerName: '', description: '' },
     ];
 
     return (
@@ -39,15 +35,12 @@ const PortfolioList: React.FC = () => {
                         <div className={styles.portfolio_container}>
                             <div className={styles.portfolio_item_one}>
                                 <Portfolio review={portfolioData[2]}/>
-                                <Portfolio review={portfolioData[1]}/>
                             </div>
                             <div className={styles.portfolio_item_two}>
-                                <Portfolio review={portfolioData[0]}/>
-                                <Portfolio review={portfolioData[3]}/>
+                                <Portfolio review={portfolioData[1]}/>
                             </div>
                             <div className={styles.portfolio_item_three}>
-                                <Portfolio review={portfolioData[4]}/>
-                                <Portfolio review={portfolioData[5]}/>
+                                <Portfolio review={portfolioData[0]}/>
                             </div>
                         </div>
                     </div>

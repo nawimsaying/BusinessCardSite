@@ -5,7 +5,6 @@ export class UserReviews {
     customerImage: string;
     description: string;
 
-
     constructor(id: number, siteImage: string, customerName: string, customerImage: string, description: string) {
         this.id = id;
         this.siteImage = siteImage;

@@ -8,25 +8,30 @@
 }
 
 .imageSite {
-    height: 100%;
-    width: 100%;
+    height: 407px;
+    width: 539px;
     display: flex;
     border-radius: 20px;
+    overflow: hidden;
 }
 
 .img {
     width: 100%;
     height: 100%;
     display: flex;
-    border-radius: 20px;
+    transition: 300ms;
+}
+
+.img:hover {
+    scale: 1.05;
+    transition: 300ms;
 }
 
 .review_content {
-    height: 126px;
+    height: auto;
     justify-content: left;
     display: flex;
-    margin-top: 35px;
-    margin-bottom: 36px;
+    margin-top: 30px;
 }
 
 .avatar {
@@ -45,7 +50,7 @@
     text-overflow: ellipsis;
     height: 23px;
     margin-left: 25px;
-
+    font-weight: 600;
 }
 
 .userInfo {
@@ -57,11 +62,12 @@
 .comment {
     font-family: "Raleway", sans-serif;
     font-size: 18px;
+    line-height: 23px;
     text-align: left;
-    font-weight: 400;
+    font-weight: 500;
     color: #5C5C5C;
-   margin-left: 25px;
-    margin-top: 4px;
+    margin-left: 25px;
+    margin-top: 10px;
 }
 @media(max-width: 1690px) {
     .container{
