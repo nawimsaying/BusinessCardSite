@@ -2,15 +2,14 @@ import React from 'react';
 import styles from './PortfolioList.module.css';
 import { motion } from 'framer-motion';
 import Portfolio from "../../UI/portfolio/Portfolio.tsx";
-import review from "../../UI/review/Review.tsx";
 import {UserReviews} from "../../../architecture/userReviews/Models.ts";
 
 
 const PortfolioList: React.FC = () => {
     const portfolioData: UserReviews[] = [
         { id: 0, customerImage: './images/customerImage.png', siteImage: './images/siteImage.png', customerName: 'Ваня', description: 'Детальная проработка технического задания - первый и очень важный этап.' },
-        { id: 1, customerImage: '', siteImage: './images/siteImage.png', customerName: '', description: '' },
-        { id: 2, customerImage: '', siteImage: './images/siteImage.png', customerName: '', description: '' },
+        { id: 1, customerImage: './images/customerImage.png', siteImage: './images/siteImage.png', customerName: '', description: '' },
+        { id: 2, customerImage: './images/customerImage.png', siteImage: './images/siteImage.png', customerName: '', description: '' },
     ];
 
     return (
@@ -22,8 +21,8 @@ const PortfolioList: React.FC = () => {
                 <div className={styles.container}>
                     <div className={styles.container_flex}>
                         <div className={styles.text_block}>
-                            <motion.p className={styles.title_one}>НАШИ<br/> РАБОТЫ</motion.p>
-                            <motion.p className={styles.title_two}>ОТЗЫВЫ<br/> КЛИЕНТОВ</motion.p>
+                            <motion.p className={styles.title_one}>НАШИ<br/>РАБОТЫ</motion.p>
+                            <motion.p className={styles.title_two}>ОТЗЫВЫ<br/>КЛИЕНТОВ</motion.p>
                             <div className={styles.description_flex}>
                                 <img className={styles.arw} src="./svg/arw.svg" alt="arrow"/>
                                 <motion.p className={styles.description}>VirtSpace - молодая студия веб-разработки,

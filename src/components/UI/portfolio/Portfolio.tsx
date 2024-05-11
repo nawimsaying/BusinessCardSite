@@ -17,9 +17,13 @@ const Portfolio: React.FC<ItemReviewProps> = ({review}) => {
                 <img src={siteImage} alt="SiteImage" className={styles.img}/>
             </div>
             
-            { review.customerImage == '' ?
+            { review.description == '' ?
                 <div className={styles.review_content}>
-                    
+                    <div className={styles.avatar_empty}/>
+                    <div className={styles.userInfo}>
+                        <div className={styles.empty_1}/>
+                        <div className={styles.empty_2}/>
+                    </div>
                 </div>
             :
                 <div className={styles.review_content}>
