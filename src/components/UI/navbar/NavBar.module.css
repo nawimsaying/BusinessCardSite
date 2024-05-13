@@ -1,116 +1,153 @@
 .headerNav {
-    position: relative;
-    width: 1266px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    padding-top: 15px;
+    width: 100%;
 }
 
 .container {
     display: flex;
+    width: 1682px;
     margin: auto;
-    width: 100%;
-    height: 100%;
 }
 
 .container_flex {
     display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-ul {
-    flex: 1;
-    list-style: none;
-    text-align: center;
-    justify-content: center;
-}
-
-ul a {
-    color: inherit;
-    display: inline-block;
-    margin: 10px 45px;
-    font-size: 18px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: color 0.4s ease;
-}
-
-ul a:hover,
-ul a.active {
-    color: rgba(229, 75, 255, 1);
-}
-
-.block_logo {
-    width: 20%;
-    text-align: end;
-    display: flex;
-}
-
-.logo {
-    width: 50%;
-    height: 100%;
-    margin: auto;
-    margin-left: 0;
-}
-
-.block_links {
-    width: 60%;
-    text-align: center;
-    align-items: center;
-}
-
-.navLink {
-    font-family: 'Jura', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    width: 75px;
-}
-
-.block_button {
-    width: 20%;
-    text-align: end;
-    display: flex;
-}
-
-.buttonLink {
-    color: inherit;
-    text-decoration: none;
-    height: fit-content;
     margin: auto;
     margin-right: 0;
 }
 
-.button {
-    width: 121px;
-    height: 42px;
-    border-radius: 10px;
-    background-color: transparent;
-    border: 2px solid rgba(189, 0, 221, 1);
-    color: inherit;
-    font-family: 'Jura';
+.block_links {
+
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul a {
+    flex-grow: 1;
+    text-decoration: none;
+    padding: 10px;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.navLink {
+    font-family: "Raleway", sans-serif;
     font-size: 18px;
-    font-weight: 400;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+    width: 135px;
+    text-align: center;
+    color: #878787;
+    margin: 0;
 }
 
-.button:hover {
-    background-color: rgba(189, 0, 221, 0.1);
+.contactLink {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    width: 135px;
+    text-align: center;
+    color: #000;
+    background-color: #FFF;
+    margin: 0;
 }
 
-@media (max-width: 1300px) {
-    .headerNav {
-        position: relative;
-        width: 100%;
+@media(max-width: 1700px) {
+    .container {
         display: flex;
+        width: 100%;
+        margin: auto;
+    }
+
+    .container_flex {
+        display: flex;
+        margin: auto;
+        margin-right: 40px;
+    }
+}
+
+@media(max-width: 664px) {
+    .headerNav {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        padding-top: 15px;
+        width: 100%;
+    }
+
+    .container {
+        display: flex;
+        width: 90%;
+        margin: auto;
+    }
+
+    .container_flex {
+        display: flex;
+        margin: auto;
+    }
+
+    .navLink {
+        font-family: "Raleway", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        width: 135px;
         text-align: center;
+        color: #878787;
+        margin: 0;
+    }
+    
+    .contactLink {
+        font-family: "Raleway", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        width: 135px;
+        text-align: center;
+        color: #000;
+        background-color: #FFF;
+        margin: 0;
+    }
+}
+
+@media(max-width: 517px) {
+    .headerNav {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        padding-top: 20px;
+        width: 100%;
+    }
+
+    ul a {
+        margin-left: 10px;
+        flex-grow: 1;
+        text-decoration: none;
+        padding: 2vw;
         align-items: center;
-        justify-content: space-between;
-        padding: 0;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        border-radius: 30px;
+    }
+
+    .navLink {
+        font-family: "Raleway", sans-serif;
+        font-size: 3.75vw;
+        font-weight: 500;
+        width: 26.5vw;
+        text-align: center;
+        color: #878787;
+    }
+    
+    .contactLink {
+        font-family: "Raleway", sans-serif;
+        font-size: 3.75vw;
+        font-weight: 500;
+        width: 26.5vw;
+        text-align: center;
+        color: #000;
+        background-color: #FFF;
     }
 }

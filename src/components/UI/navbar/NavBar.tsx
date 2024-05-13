@@ -1,48 +1,64 @@
-// @ts-ignore
 import React from 'react';
-import {NavLink, Link, useLocation} from 'react-router-dom';
-import classes from "./NavBar.module.css";
+import { NavLink, useLocation } from 'react-router-dom';
+import styles from "./NavBar.module.css";
 
-const Header = () => {
-    const location = useLocation();
+const NavBar = () => {
+    // const location = useLocation();
 
-    const navLinkStyle = (path: string) => ({
-        color: location.pathname === path ? 'rgba(229, 75, 255, 1)' : 'inherit',
-    });
+    // const navBlackAndWhiteBg = (path: string, element: number) => {
+    //     let backgroundColor = '';
+    //     let color = '';
+        
+    //     if (element == 0 || element == 1) {
+    //         if (location.pathname === '/') {
+    //             backgroundColor = path === '/' ? 'transparent' : 'transparent';
+    //             color = path === '/' ? '#878787' : '#878787';
+    //         } else if (location.pathname === '/portfolio') {
+    //             backgroundColor = path === '/portfolio' ? 'transparent' : 'transparent';
+    //             color = path === '/portfolio' ? '#878787' : '#878787';
+    //         } else if (location.pathname === '/contact') {
+    //             backgroundColor = path === '/contact' ? '#FFF' : '#000';
+    //             color = path === '/contact' ? '#000' : '#FFF';
+    //         }
+    //     }
+    //     else {
+    //         if (location.pathname === '/') {
+    //             backgroundColor = path === '/' ? '#000' : '#FFF';
+    //             color = path === '/' ? '#FFF' : '#000';
+    //         } else if (location.pathname === '/portfolio') {
+    //             backgroundColor = path === '/portfolio' ? '#000' : '#FFF';
+    //             color = path === '/portfolio' ? '#FFF' : '#000';
+    //         } else if (location.pathname === '/contact') {
+    //             backgroundColor = path === '/contact' ? '#000' : '#FFF';
+    //             color = path === '/contact' ? '#FFF' : '#00';
+    //         }
+    //     }
+
+    //     return {
+    //         backgroundColor,
+    //         color
+    //     };
+    // };
 
     return (
-        <div className={classes.headerNav}>
-            <div className={classes.container}>
-                <div className={classes.container_flex}>
-                    <div className={classes.block_logo}>
-                        <div className={classes.logo}>
-
-                        </div>
-                    </div>
-
-                    <ul className={classes.block_links}>
-                        <NavLink to="/" className={classes.navLink} style={navLinkStyle('/')}>
+        <div className={styles.headerNav}>
+            <div className={styles.container}>
+                <div className={styles.container_flex}>
+                    <ul className={styles.block_links}>
+                        <NavLink to="/" className={styles.navLink}>
                             Главная
                         </NavLink>
-                        <NavLink to="/portfolio" className={classes.navLink} style={navLinkStyle('/portfolio')}>
-                            Работы
+                        <NavLink to="/portfolio" className={styles.navLink}>
+                            Портфолио
                         </NavLink>
-                        <NavLink to="/aboutUs" className={classes.navLink} style={navLinkStyle('/aboutUs')}>
-                            О нас
+                        <NavLink to="/contact" className={styles.contactLink}>
+                            Связаться
                         </NavLink>
                     </ul>
-
-                    <div className={classes.block_button}>
-                        <Link to="/contactPage" className={classes.buttonLink}>
-                            <button className={classes.button}>
-                                Заказать
-                            </button>
-                        </Link>
-                    </div>
                 </div>
             </div>
         </div>
     );
 };
 
-export default Header;
+export default NavBar;

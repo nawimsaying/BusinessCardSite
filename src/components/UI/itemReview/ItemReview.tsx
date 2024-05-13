@@ -8,9 +8,8 @@ interface ItemReviewProps {
 }
 
 const ItemReview: React.FC<ItemReviewProps> = ({review}) => {
-    const {siteImage, customerName, customerImage, rating, description} = review;
+    const {siteImage, customerName, customerImage,  description} = review;
 
-    const gridImage = rating >= 5 ? '/images/GradeFive.png' : '/images/GradeFourPointFive.png';
 
     return (
         <div className={classes.container}>
@@ -24,7 +23,6 @@ const ItemReview: React.FC<ItemReviewProps> = ({review}) => {
                         <img src={customerImage} alt="UserPicture" className={classes.avatar}/>
                         <div className={classes.userInfo}>
                             <h1 className={classes.styleUsernameH1}>{customerName}</h1>
-                            <img src={gridImage} alt="UserPicture" className={classes.gird}/>
                         </div>
                     </div>
                     <div className={classes.containerComment}>

@@ -47,18 +47,18 @@ const OurTeam: React.FC = () => {
 
                     <motion.section initial='hidden' whileInView='visible' viewport={{once: true}}>
                         <div className={styles.block_right}>
-                            <motion.div variants={rightBlockAnimation} className={styles.block_photo_right}>
+                            <motion.div variants={leftBlockAnimation} className={styles.block_photo_right}>
                                 <img className={styles.picture} src='./images/IMG_1939.png'/>
                             </motion.div>
 
                             <div className={styles.text_block}>
-                                <motion.div variants={rightBlockTextAnimation}>
+                                <motion.div variants={leftBlockTextAnimation}>
                                     <p className={styles.name}>МАКСИМ</p>
 
                                     <p className={styles.speciality}>FRONTEND-РАЗРАБОТЧИК</p>
                                 </motion.div>
 
-                                <motion.div variants={rightBlockSocialAnimation}>
+                                <motion.div variants={leftBlockSocialAnimation}>
                                     <div className={styles.social_networks_right}>
                                         <a className={styles.links_right} href="https://vk.com/mnochevny"
                                         target="_blank">
@@ -71,7 +71,7 @@ const OurTeam: React.FC = () => {
                                     </div>
                                 </motion.div>
 
-                                <motion.div variants={rightBlockDescAnimation}>
+                                <motion.div variants={leftBlockDescAnimation}>
                                     <div className={styles.description_block}>
                                         <p className={styles.desc_text_right}>«Мы способны не только понимать технологии, но и видеть, как они могут изменить жизнь пользователей.»</p>
                                         <hr color='#FFF' className={styles.hr}></hr>
@@ -172,54 +172,6 @@ const leftBlockSocialAnimation = {
 const leftBlockDescAnimation = {
     hidden: {
         x: -25,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: {delay: 1.8, type: "spring", stiffness: 50}
-    },
-}
-
-const rightBlockAnimation = {
-    hidden: {
-        x: 25,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: {delay: 0.8, type: "spring", stiffness: 50}
-    },
-}
-
-const rightBlockTextAnimation = {
-    hidden: {
-        x: 25,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: {delay: 1.2, type: "spring", stiffness: 50}
-    },
-}
-
-const rightBlockSocialAnimation = {
-    hidden: {
-        x: 25,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: {delay: 1.5, type: "spring", stiffness: 50}
-    },
-}
-
-const rightBlockDescAnimation = {
-    hidden: {
-        x: 25,
         opacity: 0,
     },
     visible: {

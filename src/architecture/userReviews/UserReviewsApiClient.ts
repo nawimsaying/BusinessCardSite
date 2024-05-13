@@ -19,7 +19,6 @@ export class UserReviewsApiClient implements IUserReviewsSource {
                 const siteImage = item.siteImage;
                 const customerName = item.customerName;
                 const customerImage = item.customerImage;
-                const rating = item.rating;
                 const description = item.description;
                 return {
                     id,
