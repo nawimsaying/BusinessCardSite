@@ -1,8 +1,8 @@
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from "./NavBar.module.css";
 
-const NavBar = () => {
+const NavBar : React.FC = () => {
     // const location = useLocation();
 
     // const navBlackAndWhiteBg = (path: string, element: number) => {

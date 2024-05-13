@@ -1,13 +1,9 @@
-// @ts-ignore
 import React from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
-
-import Header from '../components/sections/header/Header';
+import {motion} from 'framer-motion';
 import Contact from '../components/sections/contact/Contact';
-import Footer from '../components/sections/footer/Footer';
 import NavBar from "../components/UI/navbar/NavBar.tsx";
 
-const ContactPage = () => {
+const ContactPage : React.FC = () => {
     return (
         <>
             <motion.div key="content"

@@ -1,5 +1,5 @@
 import React from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+import {motion} from 'framer-motion';
 
 import PortfolioList from "../components/sections/portfolioList/PortfolioList.tsx";
 import NavBar from "../components/UI/navbar/NavBar.tsx";

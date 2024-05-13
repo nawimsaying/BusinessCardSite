@@ -25,7 +25,6 @@ export class UserReviewsApiClient implements IUserReviewsSource {
                     siteImage,
                     customerName,
                     customerImage,
-                    rating,
                     description
 
                 } as UserReviews;

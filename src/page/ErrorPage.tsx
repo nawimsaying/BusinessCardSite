@@ -1,7 +1,7 @@
 // @ts-ignore
 import React from 'react';
 import ErrorOutput from '../components/UI/errorOutput/ErrorOutput';
-import {motion, AnimatePresence} from 'framer-motion';
+import {motion} from 'framer-motion';
 
 const ErrorPage = () => {
     return (

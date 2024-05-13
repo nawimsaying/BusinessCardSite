@@ -4,7 +4,7 @@ import classes from "./ItemReviews.module.css";
 import {UserReviews} from "../../../architecture/userReviews/Models.ts";
 
 interface ItemReviewProps {
-    review: UserReviews; // Принимаем отзыв как пропс
+    review: UserReviews;
 }
 
 const ItemReview: React.FC<ItemReviewProps> = ({review}) => {

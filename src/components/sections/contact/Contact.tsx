@@ -13,6 +13,7 @@ const Contact: React.FC = () => {
     // @ts-ignore
     const [error, setError] = useState<string | null>(null);
     const [email, setEmail] = useState("");
+    // @ts-ignore
     let [emailSentSuccessfully, setEmailSentSuccessfully] = useState(false);
     const location = useLocation();
 
