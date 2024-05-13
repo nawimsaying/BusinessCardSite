@@ -1,11 +1,18 @@
 // @ts-ignore
 import React from 'react';
 import ErrorOutput from '../components/UI/errorOutput/ErrorOutput';
+import {motion, AnimatePresence} from 'framer-motion';
 
 const ErrorPage = () => {
     return (
         <>
-            <ErrorOutput/>
+            <motion.div key="content"
+                        initial={{opacity: 0}}
+                        animate={{opacity: 1, transition: {delay: 0, duration: 0.25}}}
+                        exit={{opacity: 0}}>
+                            
+                <ErrorOutput/>
+            </motion.div>
         </>
     );
 };

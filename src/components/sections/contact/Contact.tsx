@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { UserFeedbackRepository } from "../../../architecture/feedBackUser/UserFeedbackRepository.ts";
 import { UserFeedBackApiClient } from "../../../architecture/feedBackUser/UserFeedBackApiClient.ts";
 import styles from './Contact.module.css';
 import { BeatLoader } from 'react-spinners';
 import * as EmailValidator from 'email-validator';
-import NotificationEmail from "../../UI/notificationEmail/NotificationEmail.tsx";
 
 const Contact: React.FC = () => {
 
@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
     const [error, setError] = useState<string | null>(null);
     const [email, setEmail] = useState("");
     let [emailSentSuccessfully, setEmailSentSuccessfully] = useState(false);
-
+    const location = useLocation();
 
     const sendEmail = async (email: string) => {
         try {
@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
 
     return (
         <div id="contact">
-            <div className={styles.flex}>
+            <div className={styles.flex} style={location.pathname === '/contact' ? { height:'100vh', paddingBottom:'0px', paddingTop:'0px' } : {  }}>
                 <div className={styles.container}>
                     <motion.section initial='hidden' whileInView='visible' viewport={{once: true}}>
                         <motion.p variants={nameAnimation} className={styles.section_name}>/ КОНТАКТЫ</motion.p>
@@ -154,7 +154,7 @@ const sectionAnimationSecond = {
 
 const sectionAnimationThird = {
     hidden: {
-        x: 25,
+        x: -25,
         opacity: 0,
     },
     visible: {

@@ -63,7 +63,7 @@
     position: absolute;
     z-index: 1;
     top: 900px;
-    left: 1500px;
+    left: 1200px;
     transform: translate(-50%, -50%);
     width: 50vw;
     height: 50vw;
@@ -80,7 +80,7 @@
     display: flex;
     margin-bottom: 160px;
     z-index: 3;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .portfolio_item_one,
@@ -142,7 +142,7 @@
         display: flex;
         margin-bottom: 160px;
         z-index: 3;
-        margin-top: 0px;
+        margin-top: 100px;
     }
 }
 
@@ -168,20 +168,43 @@
     }
 
     .portfolio_container {
-        width: 100%;
+        width: auto;
         display: flex;
+        flex-wrap: wrap-reverse;
+        flex-direction: row;
         margin-bottom: 160px;
         z-index: 3;
-        margin-top: 100px;
+        margin-top: 150px;
+        gap: 70px;
     }
 
     .circle{
         top: 350px;
         left: 650px;
-
         width: 45vw;
         height: 45vw;
         opacity: 0.25;
+    }
+
+    .portfolio_item_one {
+        margin: auto;
+        margin-top: 0;
+        order: 1;
+        align-items: start;
+    }
+    
+    .portfolio_item_two {
+        margin: auto;
+        margin-top: 0;
+        order: 1;
+        align-items: end;
+    }
+    
+    .portfolio_item_three {
+        margin: auto;
+        margin-top: 0;
+        align-items: start;
+        order: 1;
     }
 }
 
@@ -191,7 +214,7 @@
         display: flex;
         margin-bottom: 160px;
         z-index: 3;
-        margin-top: 0px;
+        margin-top: 75px;
         flex-direction: column-reverse;
     }
 

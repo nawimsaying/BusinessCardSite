@@ -109,7 +109,7 @@ const sectionAnimationSecond = {
 
 const sectionAnimationThird = {
     hidden: {
-        x: 25,
+        x: -100,
         opacity: 0,
     },
     visible: {
@@ -121,7 +121,7 @@ const sectionAnimationThird = {
 
 const sectionAnimationFourth = {
     hidden: {
-        x: 25,
+        x: -100,
         opacity: 0,
     },
     visible: {
