@@ -250,3 +250,18 @@
         text-wrap: nowrap;
     }
 }
+
+@media(max-width: 385px) {
+    .container {
+        margin: auto;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 80%;
+    }
+    .desc_text_in {
+        font-size: 8vw;
+    }
+    .title {
+        font-size: 10vw;
+    }
+}
