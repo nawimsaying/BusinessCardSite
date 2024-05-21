@@ -1,6 +1,5 @@
 // @ts-ignore
 import React from 'react';
-import '/src/index.css'
 import styles from './ErrorOutput.module.css';
 import { NavLink } from 'react-router-dom';
 

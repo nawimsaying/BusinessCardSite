@@ -1,6 +1,5 @@
 // @ts-ignore
 import {useState} from 'react'
-import '/src/index.css'
 import styles from './DevApproach.module.css'
 import { motion } from 'framer-motion'
 

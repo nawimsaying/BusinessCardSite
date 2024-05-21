@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '/src/index.css'
 import styles from './HomeMain.module.css';
 // @ts-ignore
 import ParticleImage, {ParticleOptions, Vector, forces, ParticleForce} from "react-particle-image";

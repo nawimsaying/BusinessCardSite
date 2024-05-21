@@ -1,9 +1,12 @@
 import React from 'react';
 import {motion} from 'framer-motion';
-import Contact from '../components/sections/contact/Contact';
-import NavBar from "../components/UI/navbar/NavBar.tsx";
 
-const ContactPage : React.FC = () => {
+import PortfolioList from "../../../components/sections/portfolioList/PortfolioList.tsx";
+import NavBar from "../../../components/UI/navbar/NavBar.tsx";
+import Contact from "../../../components/sections/contact/Contact.tsx";
+
+
+const PortfolioPage : React.FC= () => {
     return (
         <>
             <motion.div key="content"
@@ -12,10 +15,11 @@ const ContactPage : React.FC = () => {
                         exit={{opacity: 0}}>
 
                 <NavBar/>
+                <PortfolioList/>
                 <Contact/>
             </motion.div>
         </>
     );
 };
 
-export default ContactPage;
+export default PortfolioPage;

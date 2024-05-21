@@ -1,6 +1,6 @@
 // @ts-ignore
 import React from 'react';
-import ErrorOutput from '../components/UI/errorOutput/ErrorOutput';
+import ErrorOutput from '../../../components/UI/errorOutput/ErrorOutput.tsx';
 import {motion} from 'framer-motion';
 
 const ErrorPage = () => {

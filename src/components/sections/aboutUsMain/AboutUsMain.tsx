@@ -1,6 +1,5 @@
 import React from 'react';
 import {motion} from 'framer-motion'
-import '/src/index.css'
 import styles from './AboutUsMain.module.css';
 import {animateScroll as scroll} from "react-scroll";
 

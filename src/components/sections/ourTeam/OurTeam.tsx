@@ -1,5 +1,4 @@
 import React from 'react';
-import '/src/index.css'
 import styles from './OurTeam.module.css';
 import {motion} from 'framer-motion'
 

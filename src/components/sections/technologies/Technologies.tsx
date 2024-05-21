@@ -1,5 +1,4 @@
 import {useState} from 'react'
-import '/src/index.css'
 import styles from './Technologies.module.css';
 // @ts-ignore
 import {animate, motion} from 'framer-motion'

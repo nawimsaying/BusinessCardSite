@@ -1,19 +1,21 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import {Route, Routes} from 'react-router-dom';
-import HomePage from '../../page/HomePage.tsx';
-import ErrorPage from '../../page/ErrorPage.tsx';
-import PortfolioPage from "../../page/PortfolioPage.tsx";
-import ContactPage from "../../page/ContactPage.tsx";
+import {HomePage} from "page/HomePage";
+import {PortfolioPage} from "page/PortfolioPage";
+import {ContactPage} from "page/ContactPage";
+import {ErrorPage} from "page/ErrorPage";
 
 
 const AppRouter: React.FC = () => {
     return (
-        <Routes>
-            <Route path="/" element={<HomePage/>}/>
-            <Route path="/portfolio" element={<PortfolioPage/>}/>
-            <Route path="/contact" element={<ContactPage/>}/>
-            <Route path="*" element={<ErrorPage/>}/>
-        </Routes>
+        <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+                <Route path="/" element={<HomePage/>}/>
+                <Route path="/portfolio" element={<PortfolioPage/>}/>
+                <Route path="/contact" element={<ContactPage/>}/>
+                <Route path="*" element={<ErrorPage/>}/>
+            </Routes>
+        </Suspense>
     );
 };
 
