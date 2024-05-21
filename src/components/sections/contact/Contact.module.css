@@ -203,7 +203,7 @@
         padding-top: 120px;
         padding-bottom: 120px;
     }
-    
+
     .container {
         margin: auto;
         padding-left: 40px;
@@ -250,7 +250,7 @@
     }
 
     .desc_input_for_error {
-        color: #929292;
+        color: rgba(255, 61, 61, 1);
         font-family: "Bai Jamjuree", sans-serif;
         font-weight: 500;
         font-size: 24px;
@@ -297,7 +297,7 @@
     }
 
     .desc_input {
-        color: #929292;
+        color: rgba(255, 61, 61, 1);
         font-family: "Bai Jamjuree", sans-serif;
         font-weight: 500;
         font-size: 3.5vw;
@@ -314,7 +314,7 @@
     }
 
     .desc_input_for_error {
-        color: #929292;
+        color: rgba(255, 61, 61, 1);
         font-family: "Bai Jamjuree", sans-serif;
         font-weight: 500;
         font-size: 3.5vw;
