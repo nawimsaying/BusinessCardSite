@@ -12,7 +12,7 @@ const OurTeam: React.FC = () => {
 
                         <div className={styles.block}>
                             <motion.div variants={leftBlockAnimation} className={styles.block_photo}>
-                                <img className={styles.picture} src='./images/IMG_1938.png'/>
+                                <img className={styles.picture} src='./images/img_N.webp'/>
                             </motion.div>
 
                             <div className={styles.text_block}>
@@ -47,7 +47,7 @@ const OurTeam: React.FC = () => {
                     <motion.section initial='hidden' whileInView='visible' viewport={{once: true}}>
                         <div className={styles.block_right}>
                             <motion.div variants={leftBlockAnimation} className={styles.block_photo_right}>
-                                <img className={styles.picture} src='./images/IMG_1939.png'/>
+                                <img className={styles.picture} src='./images/img_M.webp'/>
                             </motion.div>
 
                             <div className={styles.text_block}>
@@ -83,7 +83,7 @@ const OurTeam: React.FC = () => {
                     <motion.section initial='hidden' whileInView='visible' viewport={{once: true}}>
                         <div className={styles.block}>
                             <motion.div variants={leftBlockAnimation} className={styles.block_photo}>
-                                <img className={styles.picture} src='./images/IMG_1937.png'/>
+                                <img className={styles.picture} src='./images/img_D.webp'/>
                             </motion.div>
 
                             <div className={styles.text_block}>

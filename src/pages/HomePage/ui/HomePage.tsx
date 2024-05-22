@@ -3,7 +3,6 @@ import React, {useEffect, useState} from 'react';
 import {HashLoader} from 'react-spinners';
 // @ts-ignore
 import {motion, AnimatePresence} from 'framer-motion';
-
 // @ts-ignore
 import Header from 'components/sections/header/Header.tsx';
 import HomeMain from 'components/sections/homeMain/HomeMain.tsx';
@@ -11,8 +10,9 @@ import AboutUsMain from 'components/sections/aboutUsMain/AboutUsMain.tsx';
 import DevApproach from 'components/sections/devApproach/DevApproach.tsx';
 import OurTeam from 'components/sections/ourTeam/OurTeam.tsx';
 import Technologies from 'components/sections/technologies/Technologies.tsx';
-import Contact from 'components/sections/contact/Contact.tsx';
-import NavBar from "components/UI/navbar/NavBar.tsx";
+import {NavBar} from "widgets/navbar";
+import {Contact} from "features/contact";
+
 
 const HomePage: React.FC = () => {
     // @ts-ignore
