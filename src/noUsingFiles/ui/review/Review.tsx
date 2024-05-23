@@ -1,7 +1,7 @@
 // @ts-ignore
 import React, {useEffect, useState} from 'react';
 import classes from './Review.module.css';
-import ItemReview from '../itemReview/ItemReview.tsx';
+import ItemReview from 'noUsingFiles/ui/itemReview/ItemReview.tsx';
 import {UserReviews} from '../../../architecture/userReviews/Models.ts';
 import {UserReviewsRepository} from '../../../architecture/userReviews/UserReviewsRepository.ts';
 import {UserReviewsApiClient} from '../../../architecture/userReviews/UserReviewsApiClient.ts';

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './PortfolioList.module.css';
 import { motion } from 'framer-motion';
-import Portfolio from "../../UI/portfolio/Portfolio.tsx";
+import Portfolio from "noUsingFiles/ui/portfolio/Portfolio.tsx";
 import {UserReviews} from "../../../architecture/userReviews/Models.ts";
 
 

@@ -55,7 +55,7 @@
     .mobile_icon {
         display: block;
         margin-right: 40px;
-        background-image: url('public/svg/header_icon.svg');
+        background-image: url('../../../../public/svg/header_icon.svg');
         margin-top: 0;
         margin-bottom: 0;
         width: 51.8px;
@@ -94,6 +94,6 @@
     .mobile_icon {
         display: block;
         margin-right: 0px;
-        background-image: url('public/svg/header_icon.svg');
+        background-image: url('../../../../public/svg/header_icon.svg');
     }
 }

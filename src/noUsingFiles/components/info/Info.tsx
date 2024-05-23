@@ -1,8 +1,8 @@
 // @ts-ignore
 import React from 'react';
 import '/src/index.css'
-import styles from "../info/Info.module.css";
-import InfoBlocks from "../../UI/listInfoBlocks/ListInfoBlocks.tsx";
+import styles from "./Info.module.css";
+import InfoBlocks from "noUsingFiles/ui/listInfoBlocks/ListInfoBlocks.tsx";
 
 const Info = () => {
     return (

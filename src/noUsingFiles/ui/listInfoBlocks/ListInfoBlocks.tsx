@@ -1,7 +1,7 @@
 // @ts-ignore
 import React from 'react';
 import classes from "./ListInfoBlocks.module.css";
-import InfoBlock from "../infoBlock/InfoBlock.tsx";
+import InfoBlock from "noUsingFiles/ui/infoBlock/InfoBlock.tsx";
 
 
 const ListInfoBlocks = () => {

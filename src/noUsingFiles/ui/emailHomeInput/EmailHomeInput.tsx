@@ -30,7 +30,7 @@ const EmailHomeInput: React.FC = () => {
                 </input>
 
                 <button className={styles.email_button_send} onClick={handleButtonClick}>
-                    <img src="/public/images/Arrow_Up_Right_LG.png" alt="vector"/>
+                    <img src="/images/Arrow_Up_Right_LG.png" alt="vector"/>
                 </button>
             </div>
         </>

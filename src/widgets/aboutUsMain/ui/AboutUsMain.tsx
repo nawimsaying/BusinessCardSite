@@ -1,7 +1,14 @@
 import React from 'react';
 import {motion} from 'framer-motion'
 import styles from './AboutUsMain.module.css';
-import {animateScroll as scroll} from "react-scroll";
+import {scrollToContact} from '../lib/scroll.ts'
+import {
+    nameAnimation,
+    titleAnimation,
+    bottomBlockAnimationFirst,
+    bottomBlockAnimationSecond,
+    bottomBlockAnimationThird
+} from '../lib/animations';
 
 const AboutUsMain: React.FC = () => {
     return (
@@ -55,75 +62,8 @@ const AboutUsMain: React.FC = () => {
     )
 }
 
-const scrollToContact = () => {
-    const target = document.querySelector("#contact");
-    if (target) {
-        const offset = target.getBoundingClientRect().top + window.pageYOffset;
-        scroll.scrollTo(offset, {
-            duration: 800,
-            smooth: "easeInOutQuart"
-        });
-    }
-};
 
-const nameAnimation = {
-    hidden: {
-        x: -100,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: {delay: 0.6, type: "spring", stiffness: 50}
-    },
-}
 
-const titleAnimation = {
-    hidden: {
-        x: -100,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: {delay: 0.8, type: "spring", stiffness: 50}
-    },
-}
 
-const bottomBlockAnimationFirst = {
-    hidden: {
-        y: -50,
-        opacity: 0,
-    },
-    visible: {
-        y: 0,
-        opacity: 1,
-        transition: {delay: 0.4, type: "spring", stiffness: 50}
-    },
-}
-
-const bottomBlockAnimationSecond = {
-    hidden: {
-        y: -50,
-        opacity: 0,
-    },
-    visible: {
-        y: 0,
-        opacity: 1,
-        transition: {delay: 0.8, type: "spring", stiffness: 50}
-    },
-}
-
-const bottomBlockAnimationThird = {
-    hidden: {
-        y: -50,
-        opacity: 0,
-    },
-    visible: {
-        y: 0,
-        opacity: 1,
-        transition: {delay: 1.0, type: "spring", stiffness: 50}
-    },
-}
 
 export default AboutUsMain;

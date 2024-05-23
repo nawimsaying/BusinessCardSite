@@ -1,6 +1,6 @@
 // @ts-ignore
 import React from 'react';
-import Review from "../../UI/review/Review.tsx";
+import Review from "noUsingFiles/ui/review/Review.tsx";
 import classes from './CustomerReviewsForMain.module.css';
 
 

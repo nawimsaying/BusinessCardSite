@@ -1,9 +1,8 @@
 // @ts-ignore
 import {useState} from 'react'
-import '/src/index.css'
 import styles from './Footer.module.css'
 
-import EmailInputFooter from '../../UI/emailInputFooter/EmailInputFooter.tsx'
+import EmailInputFooter from 'noUsingFiles/ui/emailInputFooter/EmailInputFooter.tsx'
 
 const Contact = () => {
     return (
