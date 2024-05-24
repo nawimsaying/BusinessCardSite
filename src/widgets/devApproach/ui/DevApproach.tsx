@@ -2,6 +2,10 @@
 import {useState} from 'react'
 import styles from './DevApproach.module.css'
 import { motion } from 'framer-motion'
+import {
+    sectionAnimation,
+    sectionRightAnimation
+} from '../lib/animations.ts'
 
 const DevApproach = () => {
     return (
@@ -77,28 +81,6 @@ const DevApproach = () => {
     )
 }
 
-const sectionAnimation = {
-    hidden: {
-        x: -100,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: { delay: 0.6, type: "spring", stiffness: 50 }
-    },
-}
 
-const sectionRightAnimation = {
-    hidden: {
-        x: -25,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: { delay: 0.6, type: "spring", stiffness: 50 }
-    },
-}
 
 export default DevApproach

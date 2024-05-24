@@ -4,6 +4,12 @@ import { useContact } from '../model/useContact';
 import ContactForm from './ContactForm';
 import ContactMessage from './ContactMessage';
 import styles from './styleContact.module.css';
+import {
+    nameAnimation,
+    sectionAnimationFirst,
+    sectionAnimationSecond,
+    sectionAnimationThird
+} from '../lib/animations.ts';
 
 const Contact: React.FC = () => {
     const {
@@ -60,52 +66,5 @@ const Contact: React.FC = () => {
     );
 };
 
-const nameAnimation = {
-    hidden: {
-        x: -100,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: { delay: 0.6, type: 'spring', stiffness: 50 },
-    },
-};
-
-const sectionAnimationFirst = {
-    hidden: {
-        x: -100,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: { delay: 0.8, type: 'spring', stiffness: 50 },
-    },
-};
-
-const sectionAnimationSecond = {
-    hidden: {
-        x: -100,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: { delay: 1.2, type: 'spring', stiffness: 50 },
-    },
-};
-
-const sectionAnimationThird = {
-    hidden: {
-        x: -25,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: { delay: 1.6, type: 'spring', stiffness: 50 },
-    },
-};
 
 export default Contact;

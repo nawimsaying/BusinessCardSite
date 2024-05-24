@@ -1,7 +1,7 @@
 import React from 'react';
-import DevApproach from '../../../../components/sections/devApproach/DevApproach.tsx';
 import Footer from 'noUsingFiles/components/footer/Footer.tsx';
 import {AboutUsMain} from "widgets/aboutUsMain";
+import {DevApproach} from "widgets/devApproach";
 
 
 const AboutUsPage:React.FC = () => {
