@@ -2,15 +2,19 @@ import React from 'react';
 import styles from './PortfolioList.module.css';
 import { motion } from 'framer-motion';
 import Portfolio from "noUsingFiles/ui/portfolio/Portfolio.tsx";
-import {UserReviews} from "../../../architecture/userReviews/Models.ts";
+import {
+    portfolioFirstAnimation,
+    portfolioSecondAnimation,
+    portfolioThirdAnimation,
+    sectionAnimation,
+    titleFirstAnimation,
+    titleSecondAnimation
+} from "widgets/portfolioList/lib/animations.ts";
+import {portfolioData} from "widgets/portfolioList/model/portfolioData.ts";
 
 
 const PortfolioList: React.FC = () => {
-    const portfolioData: UserReviews[] = [
-        { id: 0, customerImage: './images/customerImage.png', siteImage: './images/siteimg_1.png', customerName: 'Феликс', description: 'Разработали лендинг для барбершопа буквально за несколько дней. Получилось то, что я и хотел.' },
-        { id: 1, customerImage: './images/customerImage.png', siteImage: './images/siteimg_2.png', customerName: '', description: '' },
-        { id: 2, customerImage: './images/customerImage.png', siteImage: './images/siteimg_3.png', customerName: '', description: '' },
-    ];
+
 
     return (
         <div>
@@ -48,76 +52,6 @@ const PortfolioList: React.FC = () => {
     );
 };
 
-const titleFirstAnimation = {
-    hidden: {
-        x: -100,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: { delay: 0.2, type: "spring", stiffness: 20 }
-    },
-}
 
-const titleSecondAnimation = {
-    hidden: {
-        x: -100,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: { delay: 0.8, type: "spring", stiffness: 20 }
-    },
-}
-
-const sectionAnimation = {
-    hidden: {
-        y: -50,
-        opacity: 0,
-    },
-    visible: {
-        y: 0,
-        opacity: 1,
-        transition: {delay: 1.2, type: "spring", stiffness: 50}
-    },
-}
-
-const portfolioFirstAnimation = {
-    hidden: {
-        y: -50,
-        opacity: 0,
-    },
-    visible: {
-        y: 0,
-        opacity: 1,
-        transition: {delay: 0.4, type: "spring", stiffness: 30}
-    },
-}
-
-const portfolioSecondAnimation = {
-    hidden: {
-        y: -50,
-        opacity: 0,
-    },
-    visible: {
-        y: 0,
-        opacity: 1,
-        transition: {delay: 0.75, type: "spring", stiffness: 30}
-    },
-}
-
-const portfolioThirdAnimation = {
-    hidden: {
-        y: -50,
-        opacity: 0,
-    },
-    visible: {
-        y: 0,
-        opacity: 1,
-        transition: {delay: 1.0, type: "spring", stiffness: 30}
-    },
-}
 
 export default PortfolioList;

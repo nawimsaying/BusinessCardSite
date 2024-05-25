@@ -3,15 +3,13 @@ import React, {useEffect, useState} from 'react';
 import {HashLoader} from 'react-spinners';
 // @ts-ignore
 import {motion, AnimatePresence} from 'framer-motion';
-// @ts-ignore
-import Header from 'noUsingFiles/components/header/Header.tsx';
-import HomeMain from 'components/sections/homeMain/HomeMain.tsx';
-import OurTeam from 'components/sections/ourTeam/OurTeam.tsx';
-import Technologies from 'components/sections/technologies/Technologies.tsx';
 import {NavBar} from "widgets/navbar";
 import {Contact} from "features/contact";
 import {AboutUsMain} from "widgets/aboutUsMain";
 import {DevApproach} from "widgets/devApproach";
+import {HomeMain} from "widgets/homeMain";
+import {OurTeam} from "widgets/ourTeam";
+import {Technologies} from "widgets/technologies";
 
 
 const HomePage: React.FC = () => {
@@ -31,7 +29,6 @@ const HomePage: React.FC = () => {
 
     return (
         <>
-
             <motion.div key="content"
                         initial={{opacity: 0}}
                         animate={{opacity: 1, transition: {delay: 0, duration: 0.25}}}

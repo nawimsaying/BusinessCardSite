@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './HomeMain.module.css';
 import { motion } from 'framer-motion'
+import {titleAnimation} from "widgets/aboutUsMain/lib/animations.ts";
 
 const HomeMain: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -33,16 +34,6 @@ const HomeMain: React.FC = () => {
     );
 };
 
-const titleAnimation = {
-    hidden: {
-        y: 100,
-        opacity: 0,
-    },
-    visible: {
-        y: 0,
-        opacity: 1,
-        transition: { delay: 0.2, type: "spring", stiffness: 15 }
-    },
-}
+
 
 export default HomeMain;

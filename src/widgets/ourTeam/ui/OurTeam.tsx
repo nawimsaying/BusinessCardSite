@@ -1,6 +1,12 @@
 import React from 'react';
 import styles from './OurTeam.module.css';
 import {motion} from 'framer-motion'
+import {
+    leftBlockAnimation,
+    leftBlockDescAnimation,
+    leftBlockSocialAnimation,
+    leftBlockTextAnimation, nameAnimation
+} from "widgets/ourTeam/lib/animations.ts";
 
 const OurTeam: React.FC = () => {
     return (
@@ -120,64 +126,6 @@ const OurTeam: React.FC = () => {
     )
 }
 
-const nameAnimation = {
-    hidden: {
-        x: -100,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: {delay: 0.6, type: "spring", stiffness: 50}
-    },
-}
 
-const leftBlockAnimation = {
-    hidden: {
-        x: -100,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: {delay: 0.8, type: "spring", stiffness: 50}
-    },
-}
-
-const leftBlockTextAnimation = {
-    hidden: {
-        x: -25,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: {delay: 1.2, type: "spring", stiffness: 50}
-    },
-}
-
-const leftBlockSocialAnimation = {
-    hidden: {
-        x: -25,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: {delay: 1.5, type: "spring", stiffness: 50}
-    },
-}
-
-const leftBlockDescAnimation = {
-    hidden: {
-        x: -25,
-        opacity: 0,
-    },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: {delay: 1.8, type: "spring", stiffness: 50}
-    },
-}
 
 export default OurTeam;

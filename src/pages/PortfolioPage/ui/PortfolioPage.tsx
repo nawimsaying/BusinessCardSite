@@ -1,9 +1,9 @@
 import React from 'react';
 import {motion} from 'framer-motion';
 
-import PortfolioList from "../../../components/sections/portfolioList/PortfolioList.tsx";
 import {NavBar} from "widgets/navbar";
 import {Contact} from "features/contact";
+import {PortfolioList} from "widgets/portfolioList";
 
 
 
