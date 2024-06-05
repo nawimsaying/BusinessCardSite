@@ -1,0 +1,1 @@
+export {default as AboutUsMain} from "./ui/AboutUsMain.tsx"
