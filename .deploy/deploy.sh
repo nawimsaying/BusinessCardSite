@@ -1,5 +1,5 @@
 cd ~/BusinessCardSite
 npm run build
 
-rm -rf ~/../var/www/BusinessCardSite/html
-mv ~/BusinessCardSite/dist ~/../var/www/BusinessCardSite/html
+rm -rf ~/../var/www/VirtSpaceSite/html
+mv ~/VirtSpaceSite/dist ~/../var/www/VirtSpaceSite/html
