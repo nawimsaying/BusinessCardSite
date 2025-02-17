@@ -1,4 +1,4 @@
-cd ~/BusinessCardSite
+cd ~/VirtSpaceSite
 npm run build
 
 rm -rf ~/../var/www/VirtSpaceSite/html
